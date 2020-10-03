@@ -1,1 +1,245 @@
-@use 'variables' as *;
+@import "variables";
+
+
+
+/* media query */
+
+@mixin iPad_PC {
+  @media screen and (min-width: $iPad_PC) {
+    @content;
+  }
+}
+
+/* flexbox */
+
+@mixin flex($justify:center, $align:center) {
+  display: flex;
+  display: -webkit-flex; //Safari,Android,iOS対応
+  display: -ms-flexbox; //IE対応
+  justify-content: $justify;
+  -webkit-box-pack: $justify; //Safari,Android,iOS対応
+  -ms-flex-pack: $justify; //IE対応
+  align-items: $align;
+  -webkit-box-align: $align; //Safari,Android,iOS対応
+  -ms-flex-align: $align; //IE対応
+}
+
+/*common styles*/
+
+.container {
+  color: $main-color0;
+  font-family: $main-font-family0;
+  font-size: $main-font-size;
+  margin: 0 auto;
+  overflow: hidden;
+
+  @include iPad_PC {
+    width: 100vw;
+  }
+}
+
+.header {
+
+  &__logo {
+    width: 210px;
+    margin: 0 auto;
+    padding: 20px 0 10px;
+  }
+
+  &__logoImg {
+  }
+
+  &__nav {
+  }
+
+  &__list {
+    @include flex($justify:center, $align:center);
+    border-top: 2px solid $main-color1;
+    border-bottom: 2px solid $main-color1;
+    font-family: $main-font-family1;
+    width: 100%;
+  }
+
+  &__item {
+    border-right: 2px solid $main-color1;
+    width: 32%;
+    text-align: center;
+  }
+
+  &__item--last {
+    width: 32%;
+    text-align: center;
+  }
+
+  &__link {
+    display: block;
+    width: 100%;
+    padding: 15px 0;
+  }
+
+  &__snsList {
+    @include flex($justify:center, $align:center);
+    height: 60px;
+  }
+
+  &__snsBtn {
+    width: 50px;
+    text-align: center;
+    font-size: 24px;
+  }
+}
+
+.firstView {
+
+  &__wrapper {
+    position: relative;
+    margin: 0 0 60px;
+  }
+
+  &__textBox {
+    background-color: $main-background;
+    font-family: $main-font-family1;
+    font-size: .8rem;
+    width: 260px;
+    opacity: .8;
+    padding: 10px;
+    position: absolute;
+    top: 35vh;
+    left: 0px;
+    line-height: 2;
+  }
+
+  &__text {
+    display: block;
+    margin: 5px auto;
+  }
+
+  &__image--pc {
+    display: none;
+  }
+
+  &__image--sp {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+}
+
+.section {
+  margin: 20px 0;
+  padding: 0 20px;
+
+  &__title {
+    margin: 10px 0;
+  }
+
+  &__titleText {
+    font-family: $main-font-family1;
+    font-size: $index-font-size;
+    letter-spacing: 1.2px;
+    text-align: center;
+  }
+
+  &__innerWrapper {
+  }
+
+  &__inner01 {
+    padding: 0 0 10px;
+  }
+
+  &__iconImg {
+    margin: 0 auto;
+    width: 20%;
+  }
+
+  &__iconText {
+    font-size: $sub-font-size1;
+    text-align: center;
+  }
+
+  &__inner02 {
+    padding: 10px 0;
+  }
+
+  &__innerText {
+    font-size: $sub-font-size0;
+    line-height: 2;
+  }
+}
+
+.works {
+
+  &__imageBox {
+  }
+
+  &__linkBtn {
+    font-family: $main-font-family1;
+    text-align: right;
+    padding-right: 10px;
+  }
+
+  &__link {
+
+  }
+}
+
+.footer {
+  margin: 50px 0 0;
+
+  &__contactArea {
+    width: 240px;
+    margin: 0 auto;
+  }
+
+  &__contactLinkBtn {
+    background-color: $sub-background;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+  }
+
+  &__main {
+    margin: 50px 0 0;
+  }
+
+  &__nav{
+  }
+
+  &__list {
+    @include flex($justify:center, $align:center);
+    border-top: 2px solid $main-color1;
+    border-bottom: 2px solid $main-color1;
+    font-family: $main-font-family1;
+  }
+
+  &__item {
+    border-right: 2px solid $main-color1;
+    width: 32%;
+    text-align: center;
+  }
+
+  &__item--last {
+    width: 32%;
+    text-align: center;
+  }
+
+  &__link {
+    display: block;
+    width: 100%;
+    padding: 15px 0;
+  }
+
+  &__bottom {
+    background-color: $main-background;
+    margin: 20px 0 0;
+    width: 100%;
+
+  }
+
+  &__copyright {
+    color: $main-color1;
+    font-family: $main-font-family1;
+    text-align: center;
+    padding: 30px 0;
+  }
+}
