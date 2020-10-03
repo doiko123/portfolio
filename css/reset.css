@@ -5,28 +5,83 @@
   box-sizing: border-box;
 }
 
-/* Remove default padding */
-ul[class],
-ol[class],
-nav {
-  padding: 0;
-}
-
-/* Remove default margin */
+/* Remove default margin etc*/
+html,
 body,
+div,
+span,
+object,
+iframe,
 h1,
 h2,
 h3,
 h4,
+h5,
+h6,
 p,
-ul[class],
-ol[class],
-nav,
-figure,
 blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
 dl,
-dd {
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
   margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size:100%;
+  vertical-align: baseline;
+  background: transparent;
 }
 
 /* Set core root defaults */
@@ -38,7 +93,21 @@ html {
 body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
-  line-height: 1.5;
+  line-height: 1;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
 
 /* Remove list styles on ul, ol elements with a class attribute */
@@ -49,20 +118,14 @@ li[class] {
 
 /* A elements that don't have a class get default styles */
 a {
+  margin: 0;
+  padding: 0;
   text-decoration: none;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
 }
 
-a:link {
-  color: #27ae60;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-a:visited {
-  color: #27ae60;
-}
 
 /* Make images easier to work with */
 img,
@@ -82,4 +145,14 @@ button,
 textarea,
 select {
   font: inherit;
+}
+
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
 }
