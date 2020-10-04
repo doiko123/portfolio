@@ -26,38 +26,36 @@
 <body>
   <div class="container">
     <header class="header">
-      <div class="header__main">
-        <h1 class="header__logo">
-          <a href="index.html">
-            <img src="images/top_logo.svg" alt="doiko -chiaki yamaguchi-">
-          </a>
-        </h1>
-        <nav class="header__nav">
-          <ul class="header__list">
-            <li class="header__item">
-              <a href="about.html">About</a>
-            </li>
-            <li class="header__item">
-              <a href="works.html">Works</a>
-            </li>
-            <li class="header__item">
-              <a href="contact.html">Contact</a>
-            </li>
-          </ul>
-        </nav>
-        <ul class="header__snsList">
-          <li class="header__snsBtn">
-            <a href="https://twitter.com/doiko_niki">
-              <i class="fab fa-twitter"></i>
-            </a>
+      <h1 class="header__logo">
+        <a href="index.html">
+          <img class="header__logoImg" src="images/top_logo.svg" alt="doiko -chiaki yamaguchi-">
+        </a>
+      </h1>
+      <nav class="header__nav">
+        <ul class="header__list">
+          <li class="header__item">
+            <a href="about.html" class="header__link">About</a>
           </li>
-          <li class="header__snsBtn">
-            <a href="https://github.com/doiko123">
-              <i class="fab fa-github"></i>
-            </a>
+          <li class="header__item">
+            <a href="works.html" class="header__link">Works</a>
+          </li>
+          <li class="header__item--last">
+            <a href="contact.html" class="header__link">Contact</a>
           </li>
         </ul>
-      </div>
+      </nav>
+      <ul class="header__snsList">
+        <li class="header__snsBtn">
+          <a href="https://twitter.com/doiko_niki">
+            <i class="fab fa-twitter"></i>
+          </a>
+        </li>
+        <li class="header__snsBtn">
+          <a href="https://github.com/doiko123">
+            <i class="fab fa-github"></i>
+          </a>
+        </li>
+      </ul>
     </header>
     <main>
       <section>
@@ -74,19 +72,19 @@
         <nav class="footer__nav">
           <ul class="footer__list">
             <li class="footer__item">
-              <a href="about.html">About</a>
+              <a href="about.html" class="header__link">About</a>
             </li>
             <li class="footer__item">
-              <a href="works.html">Works</a>
+              <a href="works.html" class="header__link">Works</a>
             </li>
-            <li class="footer__item">
-              <a href="contact.html">Contact</a>
+            <li class="footer__item--last">
+              <a href="contact.html" class="header__link">Contact</a>
             </li>
           </ul>
         </nav>
       </div>
-      <div class="footer__mainBottom">
-        <p class="footer__copyright">© Doiko all rights reserved.</p>
+      <div class="footer__bottom">
+        <small class="footer__copyright">© Doiko all rights reserved.</small>
       </div>
     </footer>
     <script type="text/javascript" src="js/main.js"></script>
