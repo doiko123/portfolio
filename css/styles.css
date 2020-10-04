@@ -84,7 +84,7 @@
 }
 
 .firstView__textBox {
-  background-color: #c8f5fa;
+  background-color: #d6f8fc;
   font-family: "Lato", sans-serif;
   font-size: .8rem;
   width: 260px;
@@ -209,15 +209,88 @@
 }
 
 .footer__bottom {
-  background-color: #c8f5fa;
+  background-color: #d6f8fc;
   margin: 20px 0 0;
   width: 100%;
 }
 
 .footer__copyright {
+  display: block;
   color: #c4c4c4;
   font-family: "Lato", sans-serif;
   text-align: center;
   padding: 30px 0;
+}
+
+.profile__img {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.profile__topText {
+  margin: 20px;
+  text-align: center;
+}
+
+.profile__name {
+  padding: 0 0 10px;
+}
+
+.profile__innerText {
+  padding: 0 0 10px;
+}
+
+.history {
+  background-color: #d6f8fc;
+  width: 100%;
+}
+
+.history__wrapper {
+  padding: 20px 20px 0;
+}
+
+.history__innerText {
+  font-size: 14px;
+  line-height: 2;
+  padding: 0 5px 15px;
+}
+
+.strength {
+  margin: 40px 0;
+}
+
+.strength__wrapper {
+  border: 2px solid #c4c4c4;
+  width: 84%;
+  margin: 0 auto;
+}
+
+.strength__innerText {
+  font-size: 14px;
+  line-height: 2;
+  padding: 10px 5px;
+  text-align: center;
+}
+
+.works__container {
+  margin: 0 20px;
+}
+
+.works__item {
+  margin: 20px 0 40px;
+}
+
+.works__text {
+  font-size: 14px;
+  line-height: 2;
+}
+
+.works__title {
+  padding: 5px 0;
+}
+
+.works__skills {
+  color: #c4c4c4;
+  padding: 5px 0;
 }
 /*# sourceMappingURL=styles.css.map */
