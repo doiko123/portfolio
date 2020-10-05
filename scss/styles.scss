@@ -4,8 +4,14 @@
 
 /* media query */
 
-@mixin iPad_PC {
-  @media screen and (min-width: $iPad_PC) {
+@mixin iPad {
+  @media screen and (min-width: $iPad) {
+    @content;
+  }
+}
+
+@mixin PC {
+  @media screen and (min-width: $PC) {
     @content;
   }
 }
@@ -32,10 +38,6 @@
   font-size: $main-font-size;
   margin: 0 auto;
   overflow: hidden;
-
-  @include iPad_PC {
-    width: 100vw;
-  }
 }
 
 .header {
@@ -102,11 +104,26 @@
     font-size: .8rem;
     width: 260px;
     opacity: .8;
-    padding: 10px;
+    padding: 10px 0 10px 20px;
     position: absolute;
-    top: 35vh;
+    top: 45vh;
     left: 0px;
     line-height: 2;
+
+    @include iPad {
+      font-size: $sub-font-size0;
+      width: 300px;
+      top: 260px;
+      left: 20px;
+    }
+
+    @include PC {
+      // font-size: $main-font-size;
+      width: 360px;
+      top: 160px;
+      left: 80px;
+      padding: 20px 0 20px 40px;
+    }
   }
 
   &__text {
@@ -116,11 +133,21 @@
 
   &__image--pc {
     display: none;
+
+    @include iPad {
+      display: block;
+      max-width: 1154px;
+      margin: 0 auto;
+    }
   }
 
   &__image--sp {
-    max-width: 80%;
+    max-width: 510px;
     margin: 0 auto;
+
+    @include iPad {
+      display: none;
+    }
   }
 }
 

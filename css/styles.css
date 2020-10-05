@@ -1,8 +1,4 @@
 @charset "UTF-8";
-/* Color */
-/* font-family */
-/* font-size */
-/* media query */
 /* media query */
 /* flexbox */
 /*common styles*/
@@ -12,12 +8,6 @@
   font-size: 16px;
   margin: 0 auto;
   overflow: hidden;
-}
-
-@media screen and (min-width: 768px) {
-  .container {
-    width: 100vw;
-  }
 }
 
 .header__logo {
@@ -89,11 +79,29 @@
   font-size: .8rem;
   width: 260px;
   opacity: .8;
-  padding: 10px;
+  padding: 10px 0 10px 20px;
   position: absolute;
-  top: 35vh;
+  top: 45vh;
   left: 0px;
   line-height: 2;
+}
+
+@media screen and (min-width: 768px) {
+  .firstView__textBox {
+    font-size: 14px;
+    width: 300px;
+    top: 260px;
+    left: 20px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .firstView__textBox {
+    width: 360px;
+    top: 160px;
+    left: 80px;
+    padding: 20px 0 20px 40px;
+  }
 }
 
 .firstView__text {
@@ -105,9 +113,23 @@
   display: none;
 }
 
+@media screen and (min-width: 768px) {
+  .firstView__image--pc {
+    display: block;
+    max-width: 1154px;
+    margin: 0 auto;
+  }
+}
+
 .firstView__image--sp {
-  max-width: 80%;
+  max-width: 510px;
   margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+  .firstView__image--sp {
+    display: none;
+  }
 }
 
 .section {
