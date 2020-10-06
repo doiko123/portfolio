@@ -42,16 +42,27 @@
 
 .header {
 
+  @include iPad {
+    padding: 50px 20px 15px;
+    position: relative;
+  }
+
   &__logo {
-    width: 210px;
-    margin: 0 auto;
-    padding: 20px 0 10px;
+    width: 180px;
+    padding: 16px 20px 8px 20px;
+    text-align: left;
+
+    @include iPad {
+      width: 240px;
+      padding: 0 20px;
+    }
   }
 
   &__logoImg {
   }
 
   &__nav {
+
   }
 
   &__list {
@@ -60,34 +71,67 @@
     border-bottom: 2px solid $main-color1;
     font-family: $main-font-family1;
     width: 100%;
+
+    @include iPad {
+      border: none;
+      justify-content: flex-end;
+    }
   }
 
   &__item {
     border-right: 2px solid $main-color1;
     width: 32%;
     text-align: center;
+
+    @include iPad {
+      border: none;
+      width: auto;
+    }
   }
 
   &__item--last {
     width: 32%;
     text-align: center;
+
+    @include iPad {
+      border: none;
+      width: auto;
+    }
   }
 
   &__link {
     display: block;
     width: 100%;
-    padding: 15px 0;
+    padding: 14px 0;
+
+    @include iPad {
+      width: auto;
+      padding: 10px 30px;
+    }
   }
 
   &__snsList {
     @include flex($justify:center, $align:center);
-    height: 60px;
+
+    @include iPad {
+      align-items: end;
+      position: absolute;
+      top: 35%;
+      right: 4%;
+    }
   }
 
   &__snsBtn {
+    display: block;
     width: 50px;
     text-align: center;
     font-size: 24px;
+    padding: 10px 0;
+
+    @include iPad {
+      width: 60px;
+      padding: 10px;
+    }
   }
 }
 
@@ -104,25 +148,26 @@
     font-size: .8rem;
     width: 260px;
     opacity: .8;
-    padding: 10px 0 10px 20px;
+    padding: 20px 0 20px 20px;
     position: absolute;
-    top: 45vh;
-    left: 0px;
+    bottom: 10%;
+    left: 0%;
     line-height: 2;
 
     @include iPad {
       font-size: $sub-font-size0;
-      width: 300px;
-      top: 260px;
-      left: 20px;
+      width: 320px;
+      padding: 10px 0px 10px 30px;
+      bottom: 42%;
+      left: 4%;
     }
 
     @include PC {
       // font-size: $main-font-size;
       width: 360px;
-      top: 160px;
-      left: 80px;
-      padding: 20px 0 20px 40px;
+      bottom: 60%;
+      left: 10%;
+      padding: 20px 0 20px 50px;
     }
   }
 

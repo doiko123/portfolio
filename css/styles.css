@@ -10,10 +10,24 @@
   overflow: hidden;
 }
 
+@media screen and (min-width: 768px) {
+  .header {
+    padding: 50px 20px 15px;
+    position: relative;
+  }
+}
+
 .header__logo {
-  width: 210px;
-  margin: 0 auto;
-  padding: 20px 0 10px;
+  width: 180px;
+  padding: 16px 20px 8px 20px;
+  text-align: left;
+}
+
+@media screen and (min-width: 768px) {
+  .header__logo {
+    width: 240px;
+    padding: 0 20px;
+  }
 }
 
 .header__list {
@@ -32,10 +46,26 @@
   width: 100%;
 }
 
+@media screen and (min-width: 768px) {
+  .header__list {
+    border: none;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+}
+
 .header__item {
   border-right: 2px solid #c4c4c4;
   width: 32%;
   text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .header__item {
+    border: none;
+    width: auto;
+  }
 }
 
 .header__item--last {
@@ -43,10 +73,24 @@
   text-align: center;
 }
 
+@media screen and (min-width: 768px) {
+  .header__item--last {
+    border: none;
+    width: auto;
+  }
+}
+
 .header__link {
   display: block;
   width: 100%;
-  padding: 15px 0;
+  padding: 14px 0;
+}
+
+@media screen and (min-width: 768px) {
+  .header__link {
+    width: auto;
+    padding: 10px 30px;
+  }
 }
 
 .header__snsList {
@@ -59,13 +103,32 @@
   align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
-  height: 60px;
+}
+
+@media screen and (min-width: 768px) {
+  .header__snsList {
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: end;
+    position: absolute;
+    top: 35%;
+    right: 4%;
+  }
 }
 
 .header__snsBtn {
+  display: block;
   width: 50px;
   text-align: center;
   font-size: 24px;
+  padding: 10px 0;
+}
+
+@media screen and (min-width: 768px) {
+  .header__snsBtn {
+    width: 60px;
+    padding: 10px;
+  }
 }
 
 .firstView__wrapper {
@@ -79,28 +142,29 @@
   font-size: .8rem;
   width: 260px;
   opacity: .8;
-  padding: 10px 0 10px 20px;
+  padding: 20px 0 20px 20px;
   position: absolute;
-  top: 45vh;
-  left: 0px;
+  bottom: 10%;
+  left: 0%;
   line-height: 2;
 }
 
 @media screen and (min-width: 768px) {
   .firstView__textBox {
     font-size: 14px;
-    width: 300px;
-    top: 260px;
-    left: 20px;
+    width: 320px;
+    padding: 10px 0px 10px 30px;
+    bottom: 42%;
+    left: 4%;
   }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1080px) {
   .firstView__textBox {
     width: 360px;
-    top: 160px;
-    left: 80px;
-    padding: 20px 0 20px 40px;
+    bottom: 60%;
+    left: 10%;
+    padding: 20px 0 20px 50px;
   }
 }
 
