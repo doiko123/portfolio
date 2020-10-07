@@ -112,6 +112,7 @@
 
   &__snsList {
     @include flex($justify:center, $align:center);
+    margin: 5px 0 0;
 
     @include iPad {
       align-items: end;
@@ -139,7 +140,7 @@
 
   &__wrapper {
     position: relative;
-    margin: 0 0 60px;
+    padding: 0 0 30px;
   }
 
   &__textBox {
@@ -150,7 +151,7 @@
     opacity: .8;
     padding: 20px 0 20px 20px;
     position: absolute;
-    bottom: 10%;
+    bottom: 18%;
     left: 0%;
     line-height: 2;
 
@@ -158,12 +159,11 @@
       font-size: $sub-font-size0;
       width: 320px;
       padding: 10px 0px 10px 30px;
-      bottom: 42%;
+      bottom: 60%;
       left: 4%;
     }
 
     @include PC {
-      // font-size: $main-font-size;
       width: 360px;
       bottom: 60%;
       left: 10%;
@@ -197,8 +197,11 @@
 }
 
 .section {
-  margin: 20px 0;
-  padding: 0 20px;
+  padding: 0 20px 20px;
+
+  @include iPad {
+    padding: 20px;
+  }
 
   &__title {
     margin: 10px 0;
@@ -212,15 +215,32 @@
   }
 
   &__innerWrapper {
+
+    @include iPad {
+      @include flex($justify:center, $align:center)
+    }
   }
 
   &__inner01 {
     padding: 0 0 10px;
+
+    @include iPad {
+      padding: 0;
+    }
   }
 
   &__iconImg {
-    margin: 0 auto;
-    width: 20%;
+    display: block;
+    margin: 0 auto 10px;
+    width: 26%;
+
+    @include iPad {
+      width: 42%;
+    }
+
+    @include PC {
+      width: 160px;
+    }
   }
 
   &__iconText {
@@ -230,16 +250,25 @@
 
   &__inner02 {
     padding: 10px 0;
+
+    @include iPad {
+      font-size: $main-font-size;
+      margin: 0 20px;
+    }
   }
 
   &__innerText {
     font-size: $sub-font-size0;
     line-height: 2;
+
+    @include iPad {
+      font-size: $main-font-size;
+    }
   }
 }
 
 .footer {
-  margin: 50px 0 0;
+  // padding: 80px 0 0;
 
   &__contactArea {
     width: 240px;
@@ -257,8 +286,12 @@
   &__main {
     margin: 50px 0 0;
   }
-
+  
   &__nav{
+
+    @include iPad {
+      position: relative;
+    }
   }
 
   &__list {
@@ -266,29 +299,54 @@
     border-top: 2px solid $main-color1;
     border-bottom: 2px solid $main-color1;
     font-family: $main-font-family1;
+    width: 100%;
+
+    @include iPad {
+      border: none;
+      justify-content: flex-start;
+      position: absolute;
+      top: 20px;
+      left: 0;
+    }
   }
 
   &__item {
     border-right: 2px solid $main-color1;
     width: 32%;
     text-align: center;
+
+    @include iPad {
+      border: none;
+      width: auto;
+    }
   }
 
   &__item--last {
     width: 32%;
     text-align: center;
+
+    @include iPad {
+      border: none;
+      width: auto;
+    }
   }
 
   &__link {
     display: block;
     width: 100%;
-    padding: 15px 0;
+    padding: 14px 0;
+
+    @include iPad {
+      width: auto;
+      padding: 10px 30px;
+    }
   }
 
   &__bottom {
     background-color: $main-background;
     margin: 20px 0 0;
     width: 100%;
+
   }
 
   &__copyright {
@@ -297,6 +355,11 @@
     font-family: $main-font-family1;
     text-align: center;
     padding: 30px 0;
+
+    @include iPad {
+      text-align: right;
+      padding: 30px;
+    }
   }
 }
 
@@ -387,20 +450,59 @@
 
   // index.html内のworks部分
 
-  &__linkBtn {
-    float: right;
-    margin: 0 10px 0 0;
-    width: 30%;
+
+  &__containerForTopPage {
+    padding: 10px 0 20px;
+
   }
-  
+
+  &__listForTopPage {
+
+    @include iPad {
+      @include flex($justify:center, $align:center)
+    }
+  }
+
+  &__itemForTopPage {
+    margin: 0 0 10px;
+
+  }
+
+  &__imgForTopPage {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+
+    @include iPad {
+      width: 70%;
+      margin: 0 auto;
+    }
+  }
+
+  &__linkBtn {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
   &__link {
     display: block;
     font-family: $main-font-family1;
-    padding: 5px 0 0 10px;
+    padding: 10px 20px 0;
+
+    @include iPad {
+      padding: 20px 50px 0;
+    }
   }
 
   &__arrow {
-    padding: 0 0 0 30px;
+    display: block;
+    width: 25%;
+
+    @include iPad {
+      width: 10%;
+      padding: 0 20px 0 0;
+    }
   }
 }
 
