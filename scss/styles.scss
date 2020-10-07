@@ -41,13 +41,22 @@
 }
 
 .header {
-
+  
   @include iPad {
-    padding: 50px 20px 15px;
+    padding: 40px 20px 15px;
     position: relative;
   }
-
+  
+  @include PC {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 40px 0 30px;
+  }
+  
   &__logo {
+  }
+
+  &__logoImg {
     width: 180px;
     padding: 16px 20px 8px 20px;
     text-align: left;
@@ -56,9 +65,10 @@
       width: 240px;
       padding: 0 20px;
     }
-  }
 
-  &__logoImg {
+    @include PC {
+      padding: 0;
+    }
   }
 
   &__nav {
@@ -117,8 +127,13 @@
     @include iPad {
       align-items: end;
       position: absolute;
-      top: 35%;
+      top: 30%;
       right: 4%;
+    }
+
+    @include PC {
+      top: 30%;
+      right: 0;
     }
   }
 
@@ -181,7 +196,7 @@
 
     @include iPad {
       display: block;
-      max-width: 1154px;
+      max-width: 1080px;
       margin: 0 auto;
     }
   }
@@ -203,6 +218,11 @@
     padding: 20px;
   }
 
+  @include PC {
+    max-width: 1080px;
+    margin: 0 auto;
+  }
+
   &__title {
     margin: 10px 0;
   }
@@ -213,6 +233,30 @@
     letter-spacing: 1.2px;
     text-align: center;
   }
+
+  // 各ページごとのタイトル書式
+  &__pageTitle {
+    margin: 10px 0;
+    text-align: center;
+
+    @include iPad {
+      margin: 0 60px 20px;
+      text-align: left;
+    }
+
+    @include PC {
+      max-width: 1080px;
+      margin: 0 auto 20px;
+    }
+  }
+
+  &__pageTitleText {
+    font-family: $main-font-family1;
+    font-size: $index-font-size;
+    letter-spacing: 1.2px;
+  }
+
+  // 各ページごとのページタイトル書式終わり
 
   &__innerWrapper {
 
@@ -239,7 +283,7 @@
     }
 
     @include PC {
-      width: 160px;
+      width: 140px;
     }
   }
 
@@ -255,6 +299,10 @@
       font-size: $main-font-size;
       margin: 0 20px;
     }
+
+    @include PC {
+      margin: 0 40px;
+    }
   }
 
   &__innerText {
@@ -268,11 +316,14 @@
 }
 
 .footer {
-  // padding: 80px 0 0;
 
   &__contactArea {
-    width: 240px;
-    margin: 0 auto;
+    width: 280px;
+    margin: 0 auto 50px;
+
+    @include PC {
+      margin: 0 auto 60px;
+    }
   }
 
   &__contactLinkBtn {
@@ -284,13 +335,16 @@
   }
 
   &__main {
-    margin: 50px 0 0;
   }
-  
+
   &__nav{
 
     @include iPad {
       position: relative;
+    }
+    @include PC {
+      max-width: 1080px;
+      margin: 0 auto;
     }
   }
 
@@ -344,9 +398,17 @@
 
   &__bottom {
     background-color: $main-background;
-    margin: 20px 0 0;
     width: 100%;
+    margin: 20px 0 0;
+    padding: 30px 0;
 
+    @include iPad {
+      padding: 30px;
+    }
+
+    @include PC {
+      padding: 30px 0;
+    }
   }
 
   &__copyright {
@@ -354,25 +416,51 @@
     color: $main-color1;
     font-family: $main-font-family1;
     text-align: center;
-    padding: 30px 0;
 
     @include iPad {
       text-align: right;
-      padding: 30px;
+    }
+
+    @include PC {
+      max-width: 1080px;
+      margin: 0 auto;
     }
   }
 }
 
 .profile {
 
+  @include iPad {
+    margin: 0 60px 40px;
+
+    @include flex($justify: flex-start, $align: center)
+  }
+
+  @include PC {
+    max-width: 1080px;
+    margin: 0 auto 60px;
+  }
+
   &__img {
-    max-width: 80%;
+    display: block;
+    width: 80%;
     margin: 0 auto;
+
+    @include iPad {
+      width: 200px;
+      margin: 0;
+    }
   }
 
   &__topText {
     margin: 20px;
     text-align: center;
+
+    @include iPad {
+      font-size: $sub-font-size1;
+      margin: 60px;
+      text-align: left;
+    }
   }
 
   &__name {
@@ -388,8 +476,22 @@
   background-color: $main-background;
   width: 100%;
 
+  @include iPad {
+    background-color: #fff;
+  }
+
   &__wrapper {
     padding: 20px 20px 0;
+
+    @include iPad {
+      padding: 40px 60px 25px;
+    }
+
+    @include PC {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 40px 0 25px;
+    }
   }
 
   &__innerText {
@@ -402,17 +504,35 @@
 .strength {
   margin: 40px 0;
 
+  @include PC {
+    margin: 60px 0;
+  }
+
   &__wrapper {
     border: 2px solid $main-color1;
-    width: 84%;
+    width: 75%;
     margin: 0 auto;
+
+    @include iPad {
+      width: 65%;
+    }
+
+    @include PC {
+      max-width: 1080px;
+      // border: none;
+      width: 100%;
+    }
   }
 
   &__innerText {
     font-size: $sub-font-size0;
     line-height: 2;
-    padding: 10px 5px;
-    text-align: center;
+    padding: 12px;
+    text-align: left;
+
+    @include PC {
+      text-align: center;
+    }
   }
 }
 
