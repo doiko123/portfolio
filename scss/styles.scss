@@ -1,7 +1,5 @@
 @import "variables";
 
-
-
 /* media query */
 
 @mixin iPad {
@@ -41,19 +39,16 @@
 }
 
 .header {
-  
+
   @include iPad {
     padding: 40px 20px 15px;
     position: relative;
   }
-  
+
   @include PC {
     max-width: 1080px;
     margin: 0 auto;
     padding: 40px 0 30px;
-  }
-  
-  &__logo {
   }
 
   &__logoImg {
@@ -69,10 +64,6 @@
     @include PC {
       padding: 0;
     }
-  }
-
-  &__nav {
-
   }
 
   &__list {
@@ -332,9 +323,6 @@
     width: 100%;
     padding: 10px;
     text-align: center;
-  }
-
-  &__main {
   }
 
   &__nav{
@@ -597,6 +585,10 @@
 
   &__title {
     padding: 5px 0;
+
+    @include PC {
+      font-size: $sub-font-size1;
+    }
   }
 
   &__skills {
@@ -608,8 +600,7 @@
     font-size: $sub-font-size0;
   }
 
-  // index.html内のworks部分
-
+  // 以下、index.html内のworks部分
 
   &__containerForTopPage {
     padding: 10px 0 20px;

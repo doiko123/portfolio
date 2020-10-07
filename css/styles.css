@@ -698,6 +698,12 @@
   padding: 5px 0;
 }
 
+@media screen and (min-width: 1080px) {
+  .works__title {
+    font-size: 18px;
+  }
+}
+
 .works__skills {
   color: #c4c4c4;
   padding: 5px 0;
