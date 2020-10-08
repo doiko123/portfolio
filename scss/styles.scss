@@ -1,7 +1,6 @@
 @import "variables";
 
 /* media query */
-
 @mixin iPad {
   @media screen and (min-width: $iPad) {
     @content;
@@ -15,7 +14,6 @@
 }
 
 /* flexbox */
-
 @mixin flex($justify: center, $align: center) {
   display: flex;
   display: -webkit-flex; //Safari,Android,iOS対応
@@ -29,7 +27,6 @@
 }
 
 /*common styles*/
-
 .container {
   color: $main-color0;
   font-family: $main-font-family0;
@@ -39,12 +36,10 @@
 }
 
 .header {
-
   @include iPad {
     padding: 40px 20px 15px;
     position: relative;
   }
-
   @include PC {
     max-width: 1080px;
     margin: 0 auto;
@@ -55,12 +50,10 @@
     width: 180px;
     padding: 16px 20px 8px 20px;
     text-align: left;
-
     @include iPad {
       width: 240px;
       padding: 0 20px;
     }
-
     @include PC {
       padding: 0;
     }
@@ -72,7 +65,6 @@
     border-bottom: 2px solid $main-color1;
     font-family: $main-font-family1;
     width: 100%;
-
     @include iPad {
       border: none;
       justify-content: flex-end;
@@ -83,7 +75,6 @@
     border-right: 2px solid $main-color1;
     width: 32%;
     text-align: center;
-
     @include iPad {
       border: none;
       width: auto;
@@ -93,7 +84,6 @@
   &__item--last {
     width: 32%;
     text-align: center;
-
     @include iPad {
       border: none;
       width: auto;
@@ -104,7 +94,6 @@
     display: block;
     width: 100%;
     padding: 14px 0;
-
     @include iPad {
       width: auto;
       padding: 10px 30px;
@@ -114,14 +103,12 @@
   &__snsList {
     @include flex($justify: center, $align: center);
     margin: 5px 0 0;
-
     @include iPad {
       align-items: end;
       position: absolute;
       top: 30%;
       right: 4%;
     }
-
     @include PC {
       top: 30%;
       right: 0;
@@ -134,7 +121,6 @@
     text-align: center;
     font-size: 24px;
     padding: 10px 0;
-
     @include iPad {
       width: 60px;
       padding: 10px;
@@ -143,7 +129,6 @@
 }
 
 .firstView {
-
   &__wrapper {
     position: relative;
     padding: 0 0 30px;
@@ -160,7 +145,6 @@
     bottom: 18%;
     left: 0%;
     line-height: 2;
-
     @include iPad {
       font-size: $sub-font-size0;
       width: 320px;
@@ -168,7 +152,6 @@
       bottom: 60%;
       left: 4%;
     }
-
     @include PC {
       width: 360px;
       bottom: 60%;
@@ -184,7 +167,6 @@
 
   &__image--pc {
     display: none;
-
     @include iPad {
       display: block;
       max-width: 1080px;
@@ -195,7 +177,6 @@
   &__image--sp {
     max-width: 510px;
     margin: 0 auto;
-
     @include iPad {
       display: none;
     }
@@ -204,11 +185,9 @@
 
 .section {
   padding: 0 20px 20px;
-
   @include iPad {
     padding: 20px;
   }
-
   @include PC {
     max-width: 1080px;
     margin: 0 auto;
@@ -224,17 +203,14 @@
     letter-spacing: 1.2px;
     text-align: center;
   }
-
   // 各ページごとのタイトル書式
   &__pageTitle {
     margin: 10px 0;
     text-align: center;
-
     @include iPad {
       margin: 0 60px 20px;
       text-align: left;
     }
-
     @include PC {
       max-width: 1080px;
       margin: 0 auto 20px;
@@ -246,11 +222,8 @@
     font-size: $index-font-size;
     letter-spacing: 1.2px;
   }
-
   // 各ページごとのページタイトル書式終わり
-
   &__innerWrapper {
-
     @include iPad {
       @include flex($justify: center, $align: center);
     }
@@ -258,7 +231,6 @@
 
   &__inner01 {
     padding: 0 0 10px;
-
     @include iPad {
       padding: 0;
     }
@@ -268,11 +240,9 @@
     display: block;
     margin: 0 auto 10px;
     width: 26%;
-
     @include iPad {
       width: 42%;
     }
-
     @include PC {
       width: 140px;
     }
@@ -285,12 +255,10 @@
 
   &__inner02 {
     padding: 10px 0;
-
     @include iPad {
       font-size: $main-font-size;
       margin: 0 20px;
     }
-
     @include PC {
       margin: 0 40px;
     }
@@ -299,7 +267,6 @@
   &__innerText {
     font-size: $sub-font-size0;
     line-height: 2;
-
     @include iPad {
       font-size: $main-font-size;
     }
@@ -307,11 +274,9 @@
 }
 
 .footer {
-
   &__contactArea {
     width: 280px;
     margin: 0 auto 50px;
-
     @include PC {
       margin: 0 auto 60px;
     }
@@ -326,7 +291,6 @@
   }
 
   &__nav{
-
     @include iPad {
       position: relative;
     }
@@ -342,7 +306,6 @@
     border-bottom: 2px solid $main-color1;
     font-family: $main-font-family1;
     width: 100%;
-
     @include iPad {
       border: none;
       justify-content: flex-start;
@@ -356,7 +319,6 @@
     border-right: 2px solid $main-color1;
     width: 32%;
     text-align: center;
-
     @include iPad {
       border: none;
       width: auto;
@@ -366,7 +328,6 @@
   &__item--last {
     width: 32%;
     text-align: center;
-
     @include iPad {
       border: none;
       width: auto;
@@ -377,7 +338,6 @@
     display: block;
     width: 100%;
     padding: 14px 0;
-
     @include iPad {
       width: auto;
       padding: 10px 30px;
@@ -389,11 +349,9 @@
     width: 100%;
     margin: 20px 0 0;
     padding: 30px 0;
-
     @include iPad {
       padding: 30px;
     }
-
     @include PC {
       padding: 30px 0;
     }
@@ -404,11 +362,9 @@
     color: $main-color1;
     font-family: $main-font-family1;
     text-align: center;
-
     @include iPad {
       text-align: right;
     }
-
     @include PC {
       max-width: 1080px;
       margin: 0 auto;
@@ -417,13 +373,10 @@
 }
 
 .profile {
-
   @include iPad {
     margin: 0 60px 40px;
-
     @include flex($justify: flex-start, $align: center);
   }
-
   @include PC {
     max-width: 1080px;
     margin: 0 auto 60px;
@@ -433,7 +386,6 @@
     display: block;
     width: 80%;
     margin: 0 auto;
-
     @include iPad {
       width: 200px;
       margin: 0;
@@ -443,7 +395,6 @@
   &__topText {
     margin: 20px;
     text-align: center;
-
     @include iPad {
       font-size: $sub-font-size1;
       margin: 60px;
@@ -463,18 +414,15 @@
 .history {
   background-color: $main-background;
   width: 100%;
-
   @include iPad {
     background-color: #fff;
   }
 
   &__wrapper {
     padding: 20px 20px 5px;
-
     @include iPad {
       padding: 0 60px 0;
     }
-
     @include PC {
       max-width: 1080px;
       margin: 0 auto;
@@ -491,11 +439,9 @@
 
 .strength {
   margin: 40px 0;
-
   @include iPad {
     margin: 20px 0 60px;
   }
-
   @include PC {
     margin: 40px 0 60px;
   }
@@ -504,11 +450,9 @@
     border: 2px solid $main-color1;
     width: 75%;
     margin: 0 auto;
-
     @include iPad {
       width: 65%;
     }
-
     @include PC {
       max-width: 1080px;
       width: 900px;
@@ -520,7 +464,6 @@
     line-height: 2;
     padding: 12px;
     text-align: left;
-
     @include PC {
       text-align: center;
     }
@@ -531,11 +474,9 @@
 
   &__container {
     margin: 0 20px 20px;
-
     @include iPad {
       margin: 0 60px 40px;
     }
-
     @include PC {
       max-width: 1080px;
       margin: 0 auto;
@@ -545,11 +486,9 @@
 
   &__item {
     padding: 0 0 40px;
-
     @include iPad {
       padding: 0 20px 40px;
     }
-
     @include PC {
       @include flex($justify: center, $align: center);
       padding: 0 0 40px;
@@ -557,7 +496,6 @@
   }
 
   &__img {
-
     @include iPad {
       display: block;
       width: 500px;
@@ -565,19 +503,16 @@
       margin: 0 auto 10px;
       object-fit: cover;
     }
-
     @include PC {
       width: 400px;
       height: 300px;
       margin: 0 60px 0 0;
     }
-
   }
 
   &__text {
     font-size: $sub-font-size0;
     line-height: 2;
-
     @include PC {
       width: 600px;
     }
@@ -585,7 +520,6 @@
 
   &__title {
     padding: 5px 0;
-
     @include PC {
       font-size: $sub-font-size1;
     }
@@ -599,16 +533,12 @@
   &__innerText {
     font-size: $sub-font-size0;
   }
-
   // 以下、index.html内のworks部分
-
   &__containerForTopPage {
     padding: 10px 0 20px;
-
   }
 
   &__listForTopPage {
-
     @include iPad {
       @include flex($justify:center, $align:center)
     }
@@ -616,14 +546,12 @@
 
   &__itemForTopPage {
     margin: 0 0 10px;
-
   }
 
   &__imgForTopPage {
     display: block;
     width: 80%;
     margin: 0 auto;
-
     @include iPad {
       width: 70%;
       margin: 0 auto;
@@ -640,7 +568,6 @@
     display: block;
     font-family: $main-font-family1;
     padding: 10px 20px 0;
-
     @include iPad {
       padding: 20px 50px 0;
     }
@@ -649,7 +576,6 @@
   &__arrow {
     display: block;
     width: 25%;
-
     @include iPad {
       width: 10%;
       padding: 0 20px 0 0;
@@ -658,12 +584,10 @@
 }
 
 .contact {
-
   &__container {
     width: 100%;
     height: 1100px;
     position: relative;
-
     @include iPad {
       margin: 40px 0 0;
     }
