@@ -296,6 +296,60 @@ $PC: 1080px; //PC（1080px以上）
   }
 }
 
+.goToPageTop {
+  display: block;
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  @include iPad {
+    bottom: 20px;
+    right: 20px;
+  }
+
+  &__link {
+  position: relative;
+  display: block;
+  border-radius: 50%;
+  background-color: #333;
+  width: 36px;
+  height: 36px;
+  line-height: 1.1;
+  opacity: .7;
+  z-index: 10;
+  @include iPad {
+    width: 48px;
+    height: 48px;
+  }
+  @include PC {
+    width: 56px;
+    height: 56px;
+  }
+
+    &::after {
+      position: absolute;
+      content: '';
+      top: 40%;
+      left: 35%;
+      width: 10px;
+      height: 10px;
+      border-top: solid 3px #fafafa;
+      border-right: solid 3px #fafafa;
+      -ms-transform: rotate(-45deg);
+      -webkit-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+      z-index: 100;
+      @include iPad {
+        width: 14px;
+        height: 14px;
+      }
+      @include PC {
+        width: 16px;
+        height: 16px;
+      }
+    }
+  }
+}
+
 .footer {
   &__contactArea {
     width: 280px;

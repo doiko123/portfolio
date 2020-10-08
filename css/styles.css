@@ -347,6 +347,74 @@
   }
 }
 
+.goToPageTop {
+  display: block;
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+}
+
+@media screen and (min-width: 768px) {
+  .goToPageTop {
+    bottom: 20px;
+    right: 20px;
+  }
+}
+
+.goToPageTop__link {
+  position: relative;
+  display: block;
+  border-radius: 50%;
+  background-color: #333;
+  width: 36px;
+  height: 36px;
+  line-height: 1.1;
+  opacity: .7;
+  z-index: 10;
+}
+
+@media screen and (min-width: 768px) {
+  .goToPageTop__link {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+@media screen and (min-width: 1080px) {
+  .goToPageTop__link {
+    width: 56px;
+    height: 56px;
+  }
+}
+
+.goToPageTop__link::after {
+  position: absolute;
+  content: '';
+  top: 40%;
+  left: 35%;
+  width: 10px;
+  height: 10px;
+  border-top: solid 3px #fafafa;
+  border-right: solid 3px #fafafa;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  z-index: 100;
+}
+
+@media screen and (min-width: 768px) {
+  .goToPageTop__link::after {
+    width: 14px;
+    height: 14px;
+  }
+}
+
+@media screen and (min-width: 1080px) {
+  .goToPageTop__link::after {
+    width: 16px;
+    height: 16px;
+  }
+}
+
 .footer__contactArea {
   width: 280px;
   margin: 0 auto 50px;
