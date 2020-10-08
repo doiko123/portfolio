@@ -350,6 +350,19 @@ $PC: 1080px; //PC（1080px以上）
   }
 }
 
+.fadeIn {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(40px);
+  transition: all 1s;
+
+  &__isShow {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0px);
+  }
+}
+
 .footer {
   &__contactArea {
     width: 280px;
