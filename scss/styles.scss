@@ -1,4 +1,27 @@
-@import "variables";
+/* variables */
+$main-color0: #333;
+$main-color1: #c4c4c4;
+$main-background: #d6f8fc;
+$sub-background: #98e4ec;
+
+$main-font-family0: Helvetica,
+'游ゴシック',
+'Yu Gothic',
+YuGothic,
+HiraKakuProN-W3,
+'メイリオ',
+Meiryo,
+sans-serif;
+$main-font-family1: 'Lato',
+sans-serif;
+
+$main-font-size: 16px;
+$sub-font-size0: 14px;
+$sub-font-size1: 18px;
+$index-font-size: 26px;
+
+$iPad: 768px; //iPad等タブレット（768px以上）
+$PC: 1080px; //PC（1080px以上）
 
 /* media query */
 @mixin iPad {
