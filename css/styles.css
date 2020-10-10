@@ -455,6 +455,14 @@
   text-align: center;
 }
 
+.footer__contactLinkBtn:hover {
+  opacity: .9;
+}
+
+.footer__contactLinkBtn:focus {
+  opacity: 1;
+}
+
 @media screen and (min-width: 768px) {
   .footer__contactLinkBtn {
     padding: 16px;
@@ -916,6 +924,18 @@
   padding: 8px;
   width: 240px;
   text-align: center;
+}
+
+.contact__submitBtn:hover {
+  cursor: pointer;
+  opacity: .9;
+}
+
+.contact__submitBtn:focus {
+  opacity: 1;
+  outline: none;
+  -webkit-transform: translateY;
+          transform: translateY;
 }
 
 @media screen and (min-width: 768px) {

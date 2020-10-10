@@ -414,6 +414,12 @@ $PC: 1080px; //PC（1080px以上）
     padding: 8px;
     width: 100%;
     text-align: center;
+    &:hover {
+      opacity: .9;
+    }
+    &:focus {
+      opacity: 1;
+    }
 
     @include iPad {
       padding: 16px;
@@ -779,6 +785,15 @@ $PC: 1080px; //PC（1080px以上）
     padding: 8px;
     width: 240px;
     text-align: center;
+    &:hover {
+      cursor: pointer;
+      opacity: .9;
+    }
+    &:focus {
+      opacity: 1;
+      outline: none;
+      transform: translateY;
+    }
 
     @include iPad {
       margin: 0 auto 64px;
