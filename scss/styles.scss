@@ -414,9 +414,11 @@ $PC: 1080px; //PC（1080px以上）
     padding: 8px;
     width: 100%;
     text-align: center;
+
     &:hover {
       opacity: .9;
     }
+
     &:focus {
       opacity: 1;
     }
@@ -785,10 +787,12 @@ $PC: 1080px; //PC（1080px以上）
     padding: 8px;
     width: 240px;
     text-align: center;
+
     &:hover {
       cursor: pointer;
       opacity: .9;
     }
+
     &:focus {
       opacity: 1;
       outline: none;
@@ -804,6 +808,22 @@ $PC: 1080px; //PC（1080px以上）
     @include PC {
       margin: 0 auto 80px;
       width: 344px;
+    }
+  }
+
+  &__response {
+    margin: 0 0 40vh;
+    padding: 0 24px 0;
+    line-height: 2;
+
+    @include iPad {
+      margin: 0 64px 60vh;
+      padding: 0;
+    }
+
+    @include PC {
+      max-width: 1080px;
+      margin: 0 auto 50vh;
     }
   }
 }

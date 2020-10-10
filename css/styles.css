@@ -952,4 +952,24 @@
     width: 344px;
   }
 }
+
+.contact__response {
+  margin: 0 0 40vh;
+  padding: 0 24px 0;
+  line-height: 2;
+}
+
+@media screen and (min-width: 768px) {
+  .contact__response {
+    margin: 0 64px 60vh;
+    padding: 0;
+  }
+}
+
+@media screen and (min-width: 1080px) {
+  .contact__response {
+    max-width: 1080px;
+    margin: 0 auto 50vh;
+  }
+}
 /*# sourceMappingURL=styles.css.map */
