@@ -1,6 +1,36 @@
 'use strict';
 
 // anime.js利用
+/* ハンバーガーメニュー */
+const menuOpen = document.getElementById('open');
+const menuClose = document.getElementById('close');
+const overlayMenu = document.querySelector('.header__overlay');
+const backgroundMask = document.getElementById('blackBg')
+
+menuOpen.addEventListener('click', function (e) {
+  openOverlayMenu();
+});
+
+menuClose.addEventListener('click', function (e) {
+  closeOverlayMenu();
+});
+
+backgroundMask.addEventListener('click', function (e) {
+  closeOverlayMenu();
+});
+
+
+// 上で呼び出す各関数
+function openOverlayMenu() {
+  overlayMenu.classList.add('header__overlay--open');
+  backgroundMask.classList.add('header__blackBg--mask');
+}
+
+function closeOverlayMenu() {
+  overlayMenu.classList.remove('header__overlay--open');
+  backgroundMask.classList.remove('header__blackBg--mask');
+}
+
 
 /* スクロールでトップに戻るボタンを表示 */
 const pxChange = 1;
