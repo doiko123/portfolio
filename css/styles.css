@@ -791,24 +791,145 @@
   }
 }
 
-.contact__container {
-  width: 100%;
-  height: 1100px;
-  position: relative;
+.contact {
+  padding: 0 24px 0;
 }
 
 @media screen and (min-width: 768px) {
-  .contact__container {
-    margin: 40px 0 0;
+  .contact {
+    margin: 0 64px 0;
+    padding: 0;
+  }
+}
+
+@media screen and (min-width: 1080px) {
+  .contact {
+    max-width: 1080px;
+    margin: 0 auto;
+  }
+}
+
+.contact__titleWrapper {
+  background-color: #98e4ec;
+  margin: 0 0 32px;
+  padding: 8px 16px;
+}
+
+@media screen and (min-width: 768px) {
+  .contact__titleWrapper {
+    margin: 0 16px 48px;
+    padding: 16px 32px;
+  }
+}
+
+@media screen and (min-width: 1080px) {
+  .contact__titleWrapper {
+    margin: 0 16px 64px;
+    padding: 16px 32px;
+  }
+}
+
+.contact__title {
+  margin: 0 0 8px;
+}
+
+@media screen and (min-width: 1080px) {
+  .contact__title {
+    font-size: 18px;
+  }
+}
+
+.contact__text {
+  font-size: 14px;
+}
+
+@media screen and (min-width: 1080px) {
+  .contact__text {
+    font-size: 16px;
   }
 }
 
 .contact__form {
+  padding: 0 16px 0;
+}
+
+@media screen and (min-width: 768px) {
+  .contact__form {
+    padding: 0 80px 0;
+  }
+}
+
+@media screen and (min-width: 1080px) {
+  .contact__form {
+    margin: 0 auto;
+    padding: 0 96px 0;
+    width: 72%;
+  }
+}
+
+.contact__label {
+  line-height: 2;
+}
+
+.contact__input {
+  background-color: #fafafa;
+  border: none;
+  border-radius: 4px;
+  color: #333;
+  margin: 0 0 16px;
+  padding: 8px;
   width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  overflow: hidden;
+}
+
+.contact__input:focus {
+  outline: none;
+}
+
+@media screen and (min-width: 768px) {
+  .contact__input {
+    margin: 0 0 32px;
+  }
+}
+
+.contact__textarea {
+  height: 160px;
+  margin: 0 0 24px;
+}
+
+@media screen and (min-width: 768px) {
+  .contact__textarea {
+    margin: 0 0 40px;
+  }
+}
+
+@media screen and (min-width: 1080px) {
+  .contact__textarea {
+    margin: 0 0 48px;
+  }
+}
+
+.contact__submitBtn {
+  background-color: #98e4ec;
+  border: none;
+  display: block;
+  margin: 0 auto 48px;
+  padding: 8px;
+  width: 240px;
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .contact__submitBtn {
+    margin: 0 auto 64px;
+    padding: 16px;
+    width: 320px;
+  }
+}
+
+@media screen and (min-width: 1080px) {
+  .contact__submitBtn {
+    margin: 0 auto 80px;
+    width: 344px;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

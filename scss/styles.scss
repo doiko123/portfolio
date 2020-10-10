@@ -63,6 +63,7 @@ $PC: 1080px; //PC（1080px以上）
     padding: 40px 24px 16px;
     position: relative;
   }
+
   @include PC {
     max-width: 1080px;
     margin: 0 auto;
@@ -74,10 +75,12 @@ $PC: 1080px; //PC（1080px以上）
     width: 184px;
     padding: 16px 16px 8px 16px;
     text-align: left;
+
     @include iPad {
       width: 240px;
       padding: 0 24px;
     }
+
     @include PC {
       padding: 0;
     }
@@ -89,6 +92,7 @@ $PC: 1080px; //PC（1080px以上）
     border-bottom: 2px solid $main-color1;
     font-family: $main-font-family1;
     width: 100%;
+
     @include iPad {
       border: none;
       justify-content: flex-end;
@@ -99,6 +103,7 @@ $PC: 1080px; //PC（1080px以上）
     border-right: 2px solid $main-color1;
     width: 32%;
     text-align: center;
+
     @include iPad {
       border: none;
       width: auto;
@@ -108,6 +113,7 @@ $PC: 1080px; //PC（1080px以上）
   &__item--last {
     width: 32%;
     text-align: center;
+
     @include iPad {
       border: none;
       width: auto;
@@ -118,6 +124,7 @@ $PC: 1080px; //PC（1080px以上）
     display: block;
     width: 100%;
     padding: 16px 0;
+
     @include iPad {
       width: auto;
       padding: 8px 32px;
@@ -127,12 +134,14 @@ $PC: 1080px; //PC（1080px以上）
   &__snsList {
     @include flex($justify: center, $align: center);
     margin: 8px 0 0;
+
     @include iPad {
       align-items: end;
       position: absolute;
       top: 24%;
       right: 4%;
     }
+
     @include PC {
       top: 32%;
       right: 0;
@@ -145,6 +154,7 @@ $PC: 1080px; //PC（1080px以上）
     text-align: center;
     font-size: 24px;
     padding: 8px 0;
+
     @include iPad {
       width: 64px;
       padding: 16px;
@@ -169,6 +179,7 @@ $PC: 1080px; //PC（1080px以上）
     bottom: 18%;
     left: 0%;
     line-height: 2;
+
     @include iPad {
       font-size: $sub-font-size0;
       width: 320px;
@@ -176,6 +187,7 @@ $PC: 1080px; //PC（1080px以上）
       bottom: 60%;
       left: 4%;
     }
+
     @include PC {
       width: 360px;
       bottom: 60%;
@@ -191,6 +203,7 @@ $PC: 1080px; //PC（1080px以上）
 
   &__image--pc {
     display: none;
+
     @include iPad {
       display: block;
       max-width: 1080px;
@@ -201,6 +214,7 @@ $PC: 1080px; //PC（1080px以上）
   &__image--sp {
     max-width: 480px;
     margin: 0 auto;
+
     @include iPad {
       display: none;
     }
@@ -209,9 +223,11 @@ $PC: 1080px; //PC（1080px以上）
 
 .section {
   padding: 0 24px 24px;
+
   @include iPad {
     padding: 24px;
   }
+
   @include PC {
     max-width: 1080px;
     margin: 0 auto;
@@ -227,14 +243,17 @@ $PC: 1080px; //PC（1080px以上）
     letter-spacing: 1.2px;
     text-align: center;
   }
+
   // 各ページごとのタイトル書式
   &__pageTitle {
     margin: 16px 0;
     text-align: center;
+
     @include iPad {
       margin: 0 64px 16px;
       text-align: left;
     }
+
     @include PC {
       max-width: 1080px;
       margin: 0 auto 24px;
@@ -246,6 +265,7 @@ $PC: 1080px; //PC（1080px以上）
     font-size: $index-font-size;
     letter-spacing: 1.2px;
   }
+
   // 各ページごとのページタイトル書式終わり
   &__innerWrapper {
     @include iPad {
@@ -255,6 +275,7 @@ $PC: 1080px; //PC（1080px以上）
 
   &__inner01 {
     padding: 0 0 16px;
+
     @include iPad {
       padding: 0;
     }
@@ -264,9 +285,11 @@ $PC: 1080px; //PC（1080px以上）
     display: block;
     margin: 0 auto 16px;
     width: 24%;
+
     @include iPad {
       width: 40%;
     }
+
     @include PC {
       width: 128px;
     }
@@ -279,10 +302,12 @@ $PC: 1080px; //PC（1080px以上）
 
   &__inner02 {
     padding: 16px 0;
+
     @include iPad {
       font-size: $main-font-size;
       margin: 0 16px;
     }
+
     @include PC {
       margin: 0 40px;
     }
@@ -291,6 +316,7 @@ $PC: 1080px; //PC（1080px以上）
   &__innerText {
     font-size: $sub-font-size0;
     line-height: 2;
+
     @include iPad {
       font-size: $main-font-size;
     }
@@ -302,29 +328,32 @@ $PC: 1080px; //PC（1080px以上）
   position: fixed;
   bottom: 16px;
   right: 16px;
+
   @include iPad {
     bottom: 20px;
     right: 20px;
   }
 
   &__link {
-  position: relative;
-  display: block;
-  border-radius: 50%;
-  background-color: #333;
-  width: 36px;
-  height: 36px;
-  line-height: 1.1;
-  opacity: 0;
-  z-index: 100;
-  @include iPad {
-    width: 48px;
-    height: 48px;
-  }
-  @include PC {
-    width: 56px;
-    height: 56px;
-  }
+    position: relative;
+    display: block;
+    border-radius: 50%;
+    background-color: #333;
+    width: 36px;
+    height: 36px;
+    line-height: 1.1;
+    opacity: 0;
+    z-index: 100;
+
+    @include iPad {
+      width: 48px;
+      height: 48px;
+    }
+
+    @include PC {
+      width: 56px;
+      height: 56px;
+    }
 
     &::after {
       position: absolute;
@@ -339,10 +368,12 @@ $PC: 1080px; //PC（1080px以上）
       -webkit-transform: rotate(-45deg);
       transform: rotate(-45deg);
       z-index: 1000;
+
       @include iPad {
         width: 14px;
         height: 14px;
       }
+
       @include PC {
         width: 16px;
         height: 16px;
@@ -365,10 +396,12 @@ $PC: 1080px; //PC（1080px以上）
   &__contactArea {
     width: 240px;
     margin: 0 auto 48px;
+
     @include iPad {
       width: 320px;
       margin: 0 auto 64px;
     }
+
     @include PC {
       width: 344px;
       margin: 0 auto 80px;
@@ -381,6 +414,7 @@ $PC: 1080px; //PC（1080px以上）
     padding: 8px;
     width: 100%;
     text-align: center;
+
     @include iPad {
       padding: 16px;
     }
@@ -390,9 +424,11 @@ $PC: 1080px; //PC（1080px以上）
     background-color: $main-background;
     width: 100%;
     padding: 32px 0;
+
     @include iPad {
       padding: 40px 0;
     }
+
     @include PC {
       padding: 56px 0;
     }
@@ -403,6 +439,7 @@ $PC: 1080px; //PC（1080px以上）
     color: $main-color1;
     font-family: $main-font-family1;
     text-align: center;
+
     @include PC {
       max-width: 1080px;
       margin: 0 auto;
@@ -415,6 +452,7 @@ $PC: 1080px; //PC（1080px以上）
     margin: 0 64px 40px;
     @include flex($justify: flex-start, $align: center);
   }
+
   @include PC {
     max-width: 1080px;
     margin: 0 auto 48px;
@@ -424,6 +462,7 @@ $PC: 1080px; //PC（1080px以上）
     display: block;
     width: 80%;
     margin: 0 auto;
+
     @include iPad {
       width: 184px;
       margin: 0;
@@ -433,6 +472,7 @@ $PC: 1080px; //PC（1080px以上）
   &__topText {
     margin: 24px;
     text-align: center;
+
     @include iPad {
       font-size: $sub-font-size1;
       margin: 64px;
@@ -452,15 +492,18 @@ $PC: 1080px; //PC（1080px以上）
 .history {
   background-color: $main-background;
   width: 100%;
+
   @include iPad {
     background-color: #fff;
   }
 
   &__wrapper {
     padding: 32px 16px 16px;
+
     @include iPad {
       padding: 0 64px 0;
     }
+
     @include PC {
       margin: 0 auto;
       padding: 0;
@@ -477,9 +520,11 @@ $PC: 1080px; //PC（1080px以上）
 
 .strength {
   margin: 40px 0;
+
   @include iPad {
     margin: 32px 0 64px;
   }
+
   @include PC {
     margin: 40px 0 64px;
   }
@@ -488,9 +533,11 @@ $PC: 1080px; //PC（1080px以上）
     border: 2px solid $main-color1;
     width: 80%;
     margin: 0 auto;
+
     @include iPad {
       width: 72%;
     }
+
     @include PC {
       max-width: 1080px;
       width: 960px;
@@ -502,6 +549,7 @@ $PC: 1080px; //PC（1080px以上）
     line-height: 2;
     padding: 16px;
     text-align: left;
+
     @include PC {
       text-align: center;
     }
@@ -509,12 +557,13 @@ $PC: 1080px; //PC（1080px以上）
 }
 
 .works {
-
   &__container {
     margin: 0 16px 16px;
+
     @include iPad {
       margin: 0 64px 40px;
     }
+
     @include PC {
       max-width: 1080px;
       margin: 0 auto;
@@ -524,9 +573,11 @@ $PC: 1080px; //PC（1080px以上）
 
   &__item {
     padding: 0 0 40px;
+
     @include iPad {
       padding: 0 0 40px;
     }
+
     @include PC {
       @include flex($justify: center, $align: center);
       padding: 0 0 40px;
@@ -541,6 +592,7 @@ $PC: 1080px; //PC（1080px以上）
       margin: 0 auto 16px;
       object-fit: cover;
     }
+
     @include PC {
       width: 400px;
       height: 300px;
@@ -551,6 +603,7 @@ $PC: 1080px; //PC（1080px以上）
   &__text {
     font-size: $sub-font-size0;
     line-height: 2;
+
     @include PC {
       width: 560px;
     }
@@ -570,6 +623,7 @@ $PC: 1080px; //PC（1080px以上）
   &__innerText {
     font-size: $sub-font-size0;
   }
+
   // 以下、index.html内のworks部分
   &__containerForTopPage {
     padding: 16px 0 24px;
@@ -589,6 +643,7 @@ $PC: 1080px; //PC（1080px以上）
     display: block;
     width: 80%;
     margin: 0 auto;
+
     @include iPad {
       width: 64%;
       margin: 0 auto;
@@ -605,6 +660,7 @@ $PC: 1080px; //PC（1080px以上）
     display: block;
     font-family: $main-font-family1;
     padding: 8px 24px 0;
+
     @include iPad {
       padding: 24px 48px 0;
     }
@@ -613,6 +669,7 @@ $PC: 1080px; //PC（1080px以上）
   &__arrow {
     display: block;
     width: 25%;
+
     @include iPad {
       width: 10%;
       padding: 0 24px 0 0;
@@ -621,21 +678,117 @@ $PC: 1080px; //PC（1080px以上）
 }
 
 .contact {
-  &__container {
-    width: 100%;
-    height: 1100px;
-    position: relative;
+  padding: 0 24px 0;
+
+  @include iPad {
+    margin: 0 64px 0;
+    padding: 0;
+  }
+
+  @include PC {
+    max-width: 1080px;
+    margin: 0 auto;
+  }
+
+  &__titleWrapper {
+    background-color: $sub-background;
+    margin: 0 0 32px;
+    padding: 8px 16px;
+
     @include iPad {
-      margin: 40px 0 0;
+      margin: 0 16px 48px;
+      padding: 16px 32px;
+    }
+
+    @include PC {
+      margin: 0 16px 64px;
+      padding: 16px 32px;
+    }
+  }
+
+  &__title {
+    margin: 0 0 8px;
+
+    @include PC {
+      font-size: $sub-font-size1;
+    }
+  }
+
+  &__text {
+    font-size: $sub-font-size0;
+
+    @include PC {
+      font-size: $main-font-size;
     }
   }
 
   &__form {
+    padding: 0 16px 0;
+
+    @include iPad {
+      padding: 0 80px 0;
+    }
+
+    @include PC {
+      margin: 0 auto;
+      padding: 0 96px 0;
+      width: 72%;
+    }
+  }
+
+  &__label {
+    line-height: 2;
+  }
+
+  &__input {
+    background-color: #fafafa;
+    border: none;
+    border-radius: 4px;
+    color: $main-color0;
+    margin: 0 0 16px;
+    padding: 8px;
     width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    overflow: hidden;
+
+    &:focus {
+      outline: none;
+    }
+
+    @include iPad {
+      margin: 0 0 32px;
+    }
+  }
+
+  &__textarea {
+    height: 160px;
+    margin: 0 0 24px;
+
+    @include iPad {
+      margin: 0 0 40px;
+    }
+
+    @include PC {
+      margin: 0 0 48px;
+    }
+  }
+
+  &__submitBtn {
+    background-color: $sub-background;
+    border: none;
+    display: block;
+    margin: 0 auto 48px;
+    padding: 8px;
+    width: 240px;
+    text-align: center;
+
+    @include iPad {
+      margin: 0 auto 64px;
+      padding: 16px;
+      width: 320px;
+    }
+
+    @include PC {
+      margin: 0 auto 80px;
+      width: 344px;
+    }
   }
 }

@@ -62,32 +62,38 @@
         <div class="section__pageTitle">
           <h2 class="section__pageTitleText">Contact</h2>
         </div>
-        <div class="contact__container">
-          <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfYcaQLjLle-NFClD4s6RpnDdsHfepKfmZK4pOgO_zTg9nZ3w/formResponse" method="post"
-          target="hidden_iframe" onsubmit="submitted=true;">
-            <label for="form-name">お名前（必須）</label>
-            <p>
-              <input id="form-name" type="text" name="entry.1781500597" required>
-            </p>
-            <label for="form-mail">メールアドレス（必須）</label>
-            <p>
-              <input id="form-mail" type="email" name="entry.1640447617" required>
-            </p>
-            <label for="form-telephone">お電話番号</label>
-            <p>
-              <input id="form-telephone" type="tel" name="entry.297979220">
-            </p>
-            <label for="form-detail">お問い合わせ内容（必須）</label>
-            <p>
-              <textarea id="form-detail" name="entry.2040870261" required></textarea>
-            </p>
-            <p>
-              <button type="submit" name="button" value="送信する">送信</button>
-            </p>
-          </form>
-          <script type="text/javascript">var submitted = false;</script>
-          <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted){window.location='◯◯◯◯（サンクスページのパス）';}"></iframe>
-        </div>
+        <section class="contact">
+          <div class="contact__titleWrapper">
+            <h3 class="contact__title">■ お問い合わせ</h3>
+            <p class="contact__text">お仕事のご相談・ご質問などありましたら、以下のフォームからご連絡ください。</p>
+          </div>
+          <div class="contact__form">
+            <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfYcaQLjLle-NFClD4s6RpnDdsHfepKfmZK4pOgO_zTg9nZ3w/formResponse" method="post"
+            target="hidden_iframe" onsubmit="submitted=true;">
+              <label for="form-name" class="contact__label">お名前（必須）</label>
+              <p>
+                <input id="form-name"type="text" class="contact__input" name="entry.1781500597" required>
+              </p>
+              <label for="form-mail" class="contact__label">メールアドレス（必須）</label>
+              <p>
+                <input id="form-mail" type="email" class="contact__input" name="entry.1640447617" required>
+              </p>
+              <label for="form-telephone" class="contact__label">お電話番号</label>
+              <p>
+                <input id="form-telephone" type="tel" class="contact__input" name="entry.297979220">
+              </p>
+              <label for="form-detail" class="contact__label">お問い合わせ内容（必須）</label>
+              <p>
+                <textarea id="form-detail" class="contact__input contact__textarea" name="entry.2040870261" required></textarea>
+              </p>
+              <p>
+                <button type="submit" name="button" class="contact__submitBtn" value="送信する">入力内容を送信</button>
+              </p>
+            </form>
+            <script type="text/javascript">var submitted = false;</script>
+            <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted){window.location='◯◯◯◯（サンクスページのパス）';}"></iframe>
+          </div>
+        </section>
       </section>
     </main>
     <p class="goToPageTop">
