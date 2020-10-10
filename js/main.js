@@ -1,6 +1,5 @@
 'use strict';
 
-// anime.js利用
 /* ハンバーガーメニュー */
 const menuOpen = document.getElementById('open');
 const menuClose = document.getElementById('close');
@@ -34,21 +33,28 @@ function closeOverlayMenu() {
 
 /* スクロールでトップに戻るボタンを表示 */
 const pxChange = 1;
+const buttonToPageTop = document.getElementById('goToPageTopLink')
 
 window.addEventListener('scroll', function (e) {
   let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-  if (scrollTop > pxChange) {
-    document.getElementById("goToPageTopLink").classList.add("fadeIn");
-  } else {
-    document.getElementById("goToPageTopLink").classList.remove("fadeIn");
-  }
+  showButtonOnScroll(scrollTop);
 });
 
+// 上で呼び出す関数
+function showButtonOnScroll(scrollTop) {
+  if (scrollTop > pxChange) {
+    buttonToPageTop.classList.add('fadeIn');
+  } else {
+    buttonToPageTop.classList.remove('fadeIn');
+  }
+}
+
+// anime.js利用
 /* トップに戻るボタンのスムーズスクロール */
-document.getElementById("goToPageTopLink").addEventListener('click', function (e) {
-  anime.remove("html, body");
+buttonToPageTop.addEventListener('click', function (e) {
+  anime.remove('html, body');
   anime({
-    targets: "html, body",
+    targets: 'html, body',
     scrollTop: 0,
     dulation: 600,
     easing: 'easeOutCubic',
@@ -56,19 +62,20 @@ document.getElementById("goToPageTopLink").addEventListener('click', function (e
   return false;
 });
 
+
 /* contact.htmlフォームのメールアドレス バリデーションチェック */
 function inputValueCheck() {
-  const inputEmail = document.getElementById("form-mail").value;
-  checkInputEmail(inputEmail);
+  const inputEmail = document.getElementById('form-mail').value;
+  const inputEmailPattern = /^[A-Za-z0-9]{1}[A-Za-z0-9_.-]*@{1}[A-Za-z0-9_.-]{1,}\.[A-Za-z0-9]{1,}$/ //入力ルール（正規表現）
+  checkInputEmail(inputEmail, inputEmailPattern);
 }
 
-//指定したメールアドレスの形式と異なる場合は弾いてアラートmsgを表示
-function checkInputEmail(inputEmail) {
-  const inputEmailPattern = /^[A-Za-z0-9]{1}[A-Za-z0-9_.-]*@{1}[A-Za-z0-9_.-]{1,}\.[A-Za-z0-9]{1,}$/ //入力ルール（正規表現）
-
+//上で呼び出す関数
+function checkInputEmail(inputEmail, inputEmailPattern) {
+  //指定したメールアドレスの形式と異なる場合は弾いてアラートmsgを表示
   if (inputEmailPattern.test(inputEmail)) {
     return submitted = true;
   } else {
-    alert("メールアドレスの形式に誤りがあります。ご確認をお願いいたします。")
+    alert("メールアドレスの形式に誤りがあります。ご確認をお願いいたします。");
   }
 }
