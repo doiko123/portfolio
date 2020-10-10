@@ -60,22 +60,23 @@ $PC: 1080px; //PC（1080px以上）
 
 .header {
   @include iPad {
-    padding: 40px 20px 15px;
+    padding: 40px 24px 16px;
     position: relative;
   }
   @include PC {
     max-width: 1080px;
     margin: 0 auto;
-    padding: 40px 0 30px;
+    padding: 40px 0 32px;
   }
 
   &__logoImg {
-    width: 180px;
-    padding: 16px 20px 8px 20px;
+    display: block;
+    width: 184px;
+    padding: 16px 16px 8px 16px;
     text-align: left;
     @include iPad {
       width: 240px;
-      padding: 0 20px;
+      padding: 0 24px;
     }
     @include PC {
       padding: 0;
@@ -116,37 +117,37 @@ $PC: 1080px; //PC（1080px以上）
   &__link {
     display: block;
     width: 100%;
-    padding: 14px 0;
+    padding: 16px 0;
     @include iPad {
       width: auto;
-      padding: 10px 30px;
+      padding: 8px 32px;
     }
   }
 
   &__snsList {
     @include flex($justify: center, $align: center);
-    margin: 5px 0 0;
+    margin: 8px 0 0;
     @include iPad {
       align-items: end;
       position: absolute;
-      top: 30%;
+      top: 24%;
       right: 4%;
     }
     @include PC {
-      top: 30%;
+      top: 32%;
       right: 0;
     }
   }
 
   &__snsBtn {
     display: block;
-    width: 50px;
+    width: 48px;
     text-align: center;
     font-size: 24px;
-    padding: 10px 0;
+    padding: 8px 0;
     @include iPad {
-      width: 60px;
-      padding: 10px;
+      width: 64px;
+      padding: 16px;
     }
   }
 }
@@ -154,16 +155,16 @@ $PC: 1080px; //PC（1080px以上）
 .firstView {
   &__wrapper {
     position: relative;
-    padding: 0 0 30px;
+    padding: 0 0 32px;
   }
 
   &__textBox {
     background-color: $main-background;
     font-family: $main-font-family1;
     font-size: .8rem;
-    width: 260px;
+    width: 256px;
     opacity: .8;
-    padding: 20px 0 20px 20px;
+    padding: 16px 0 16px 16px;
     position: absolute;
     bottom: 18%;
     left: 0%;
@@ -171,7 +172,7 @@ $PC: 1080px; //PC（1080px以上）
     @include iPad {
       font-size: $sub-font-size0;
       width: 320px;
-      padding: 10px 0px 10px 30px;
+      padding: 8px 0px 8px 32px;
       bottom: 60%;
       left: 4%;
     }
@@ -179,13 +180,13 @@ $PC: 1080px; //PC（1080px以上）
       width: 360px;
       bottom: 60%;
       left: 10%;
-      padding: 20px 0 20px 50px;
+      padding: 24px 0 24px 56px;
     }
   }
 
   &__text {
     display: block;
-    margin: 5px auto;
+    margin: 8px auto;
   }
 
   &__image--pc {
@@ -198,7 +199,7 @@ $PC: 1080px; //PC（1080px以上）
   }
 
   &__image--sp {
-    max-width: 510px;
+    max-width: 480px;
     margin: 0 auto;
     @include iPad {
       display: none;
@@ -207,9 +208,9 @@ $PC: 1080px; //PC（1080px以上）
 }
 
 .section {
-  padding: 0 20px 20px;
+  padding: 0 24px 24px;
   @include iPad {
-    padding: 20px;
+    padding: 24px;
   }
   @include PC {
     max-width: 1080px;
@@ -217,7 +218,7 @@ $PC: 1080px; //PC（1080px以上）
   }
 
   &__title {
-    margin: 10px 0;
+    margin: 8px 0;
   }
 
   &__titleText {
@@ -228,15 +229,15 @@ $PC: 1080px; //PC（1080px以上）
   }
   // 各ページごとのタイトル書式
   &__pageTitle {
-    margin: 10px 0;
+    margin: 16px 0;
     text-align: center;
     @include iPad {
-      margin: 0 60px 20px;
+      margin: 0 64px 16px;
       text-align: left;
     }
     @include PC {
       max-width: 1080px;
-      margin: 0 auto 20px;
+      margin: 0 auto 24px;
     }
   }
 
@@ -253,7 +254,7 @@ $PC: 1080px; //PC（1080px以上）
   }
 
   &__inner01 {
-    padding: 0 0 10px;
+    padding: 0 0 16px;
     @include iPad {
       padding: 0;
     }
@@ -261,13 +262,13 @@ $PC: 1080px; //PC（1080px以上）
 
   &__iconImg {
     display: block;
-    margin: 0 auto 10px;
-    width: 26%;
+    margin: 0 auto 16px;
+    width: 24%;
     @include iPad {
-      width: 42%;
+      width: 40%;
     }
     @include PC {
-      width: 140px;
+      width: 128px;
     }
   }
 
@@ -277,10 +278,10 @@ $PC: 1080px; //PC（1080px以上）
   }
 
   &__inner02 {
-    padding: 10px 0;
+    padding: 16px 0;
     @include iPad {
       font-size: $main-font-size;
-      margin: 0 20px;
+      margin: 0 16px;
     }
     @include PC {
       margin: 0 40px;
@@ -365,22 +366,27 @@ $PC: 1080px; //PC（1080px以上）
 
 .footer {
   &__contactArea {
-    width: 280px;
+    width: 240px;
     margin: 0 auto 48px;
     @include iPad {
-    margin: 0 auto 64px;
+      width: 320px;
+      margin: 0 auto 64px;
     }
     @include PC {
-      margin: 0 auto 72px;
+      width: 344px;
+      margin: 0 auto 80px;
     }
   }
 
   &__contactLinkBtn {
     background-color: $sub-background;
     display: block;
+    padding: 8px;
     width: 100%;
-    padding: 10px;
     text-align: center;
+    @include iPad {
+      padding: 16px;
+    }
   }
 
   &__main {
@@ -391,7 +397,7 @@ $PC: 1080px; //PC（1080px以上）
       padding: 40px 0;
     }
     @include PC {
-      padding: 48px 0;
+      padding: 56px 0;
     }
   }
 
@@ -409,12 +415,12 @@ $PC: 1080px; //PC（1080px以上）
 
 .profile {
   @include iPad {
-    margin: 0 60px 40px;
+    margin: 0 64px 40px;
     @include flex($justify: flex-start, $align: center);
   }
   @include PC {
     max-width: 1080px;
-    margin: 0 auto 60px;
+    margin: 0 auto 48px;
   }
 
   &__img {
@@ -422,27 +428,27 @@ $PC: 1080px; //PC（1080px以上）
     width: 80%;
     margin: 0 auto;
     @include iPad {
-      width: 200px;
+      width: 184px;
       margin: 0;
     }
   }
 
   &__topText {
-    margin: 20px;
+    margin: 24px;
     text-align: center;
     @include iPad {
       font-size: $sub-font-size1;
-      margin: 60px;
+      margin: 64px;
       text-align: left;
     }
   }
 
   &__name {
-    padding: 0 0 10px;
+    padding: 0 0 8px;
   }
 
   &__innerText {
-    padding: 0 0 10px;
+    padding: 0 0 8px;
   }
 }
 
@@ -454,50 +460,50 @@ $PC: 1080px; //PC（1080px以上）
   }
 
   &__wrapper {
-    padding: 20px 20px 5px;
+    padding: 32px 16px 16px;
     @include iPad {
-      padding: 0 60px 0;
+      padding: 0 64px 0;
     }
     @include PC {
-      max-width: 1080px;
       margin: 0 auto;
-      padding: 20px 0 0;
+      padding: 0;
+      max-width: 1080px;
     }
   }
 
   &__innerText {
     font-size: $sub-font-size0;
     line-height: 2;
-    padding: 0 5px 15px;
+    padding: 0 8px 16px;
   }
 }
 
 .strength {
   margin: 40px 0;
   @include iPad {
-    margin: 20px 0 60px;
+    margin: 32px 0 64px;
   }
   @include PC {
-    margin: 40px 0 60px;
+    margin: 40px 0 64px;
   }
 
   &__wrapper {
     border: 2px solid $main-color1;
-    width: 75%;
+    width: 80%;
     margin: 0 auto;
     @include iPad {
-      width: 65%;
+      width: 72%;
     }
     @include PC {
       max-width: 1080px;
-      width: 900px;
+      width: 960px;
     }
   }
 
   &__innerText {
     font-size: $sub-font-size0;
     line-height: 2;
-    padding: 12px;
+    padding: 16px;
     text-align: left;
     @include PC {
       text-align: center;
@@ -508,9 +514,9 @@ $PC: 1080px; //PC（1080px以上）
 .works {
 
   &__container {
-    margin: 0 20px 20px;
+    margin: 0 16px 16px;
     @include iPad {
-      margin: 0 60px 40px;
+      margin: 0 64px 40px;
     }
     @include PC {
       max-width: 1080px;
@@ -522,7 +528,7 @@ $PC: 1080px; //PC（1080px以上）
   &__item {
     padding: 0 0 40px;
     @include iPad {
-      padding: 0 20px 40px;
+      padding: 0 0 40px;
     }
     @include PC {
       @include flex($justify: center, $align: center);
@@ -533,15 +539,15 @@ $PC: 1080px; //PC（1080px以上）
   &__img {
     @include iPad {
       display: block;
-      width: 500px;
-      height: 375px;
-      margin: 0 auto 10px;
+      width: 480px;
+      height: 360px;
+      margin: 0 auto 16px;
       object-fit: cover;
     }
     @include PC {
       width: 400px;
       height: 300px;
-      margin: 0 60px 0 0;
+      margin: 0 64px 0 0;
     }
   }
 
@@ -549,12 +555,11 @@ $PC: 1080px; //PC（1080px以上）
     font-size: $sub-font-size0;
     line-height: 2;
     @include PC {
-      width: 600px;
+      width: 560px;
     }
   }
 
   &__title {
-    padding: 5px 0;
     @include PC {
       font-size: $sub-font-size1;
     }
@@ -562,7 +567,7 @@ $PC: 1080px; //PC（1080px以上）
 
   &__skills {
     color: $main-color1;
-    padding: 5px 0;
+    padding: 0 0 8px;
   }
 
   &__innerText {
@@ -570,7 +575,7 @@ $PC: 1080px; //PC（1080px以上）
   }
   // 以下、index.html内のworks部分
   &__containerForTopPage {
-    padding: 10px 0 20px;
+    padding: 16px 0 24px;
   }
 
   &__listForTopPage {
@@ -580,7 +585,7 @@ $PC: 1080px; //PC（1080px以上）
   }
 
   &__itemForTopPage {
-    margin: 0 0 10px;
+    margin: 0 0 16px;
   }
 
   &__imgForTopPage {
@@ -588,7 +593,7 @@ $PC: 1080px; //PC（1080px以上）
     width: 80%;
     margin: 0 auto;
     @include iPad {
-      width: 70%;
+      width: 64%;
       margin: 0 auto;
     }
   }
@@ -602,9 +607,9 @@ $PC: 1080px; //PC（1080px以上）
   &__link {
     display: block;
     font-family: $main-font-family1;
-    padding: 10px 20px 0;
+    padding: 8px 24px 0;
     @include iPad {
-      padding: 20px 50px 0;
+      padding: 24px 48px 0;
     }
   }
 
@@ -613,7 +618,7 @@ $PC: 1080px; //PC（1080px以上）
     width: 25%;
     @include iPad {
       width: 10%;
-      padding: 0 20px 0 0;
+      padding: 0 24px 0 0;
     }
   }
 }
