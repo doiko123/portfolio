@@ -25,7 +25,8 @@
 
 @media screen and (min-width: 768px) {
   .header {
-    padding: 40px 24px 16px;
+    display: block;
+    padding: 24px 24px 8px;
     position: relative;
   }
 }
@@ -34,7 +35,7 @@
   .header {
     max-width: 1080px;
     margin: 0 auto;
-    padding: 40px 0 32px;
+    padding: 24px 0 8px;
   }
 }
 
@@ -69,6 +70,12 @@
   display: none;
 }
 
+@media screen and (min-width: 768px) {
+  .header__spMenu {
+    display: none;
+  }
+}
+
 .header__overlay {
   background: #fafafa;
   cursor: pointer;
@@ -91,11 +98,27 @@
   right: 0;
 }
 
+@media screen and (min-width: 768px) {
+  .header__overlay {
+    display: none;
+  }
+}
+
 .header__spCloseMenu {
   position: absolute;
   top: 0;
   right: 0;
   padding: 24px;
+}
+
+.header__tabletPcMenu {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .header__tabletPcMenu {
+    display: block;
+  }
 }
 
 .header__list {
@@ -106,9 +129,19 @@
 
 @media screen and (min-width: 768px) {
   .header__list {
+    display: -webkit-box;
+    display: flex;
+    display: -ms-flexbox;
+    justify-content: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
+    line-height: 24px;
   }
 }
 
@@ -119,8 +152,8 @@
 
 @media screen and (min-width: 768px) {
   .header__item {
-    border: none;
     width: auto;
+    padding: 0;
   }
 }
 
@@ -132,7 +165,7 @@
 @media screen and (min-width: 768px) {
   .header__link {
     width: auto;
-    padding: 8px 32px;
+    padding: 8px 40px;
   }
 }
 
@@ -155,24 +188,24 @@
         -ms-flex-align: end;
             align-items: end;
     position: absolute;
-    top: 24%;
+    top: 16%;
     right: 4%;
   }
 }
 
 @media screen and (min-width: 1080px) {
   .header__snsList {
-    top: 32%;
+    top: 24%;
     right: 0;
   }
 }
 
 .header__snsBtn {
   display: block;
-  width: 48px;
+  width: 64px;
   text-align: center;
   font-size: 24px;
-  padding: 8px 0;
+  padding: 16px;
 }
 
 @media screen and (min-width: 768px) {
@@ -873,7 +906,7 @@
 @media screen and (min-width: 768px) {
   .contact__titleWrapper {
     margin: 0 16px 48px;
-    padding: 16px 32px;
+    padding: 8px 32px;
   }
 }
 

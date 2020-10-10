@@ -62,14 +62,15 @@ $PC: 1080px; //PC（1080px以上）
   @include flex($justify: space-between, $align: center);
 
   @include iPad {
-    padding: 40px 24px 16px;
+    display: block;
+    padding: 24px 24px 8px;
     position: relative;
   }
 
   @include PC {
     max-width: 1080px;
     margin: 0 auto;
-    padding: 40px 0 32px;
+    padding: 24px 0 8px;
   }
 
   &__logoImg {
@@ -97,6 +98,9 @@ $PC: 1080px; //PC（1080px以上）
     &--hide {
       display: none;
     }
+    @include iPad {
+      display: none;
+    }
   }
 
   &__overlay {
@@ -118,6 +122,10 @@ $PC: 1080px; //PC（1080px以上）
     &--open {
       right: 0;
     }
+
+    @include iPad {
+      display: none;
+    }
   }
 
   &__spCloseMenu {
@@ -127,13 +135,22 @@ $PC: 1080px; //PC（1080px以上）
     padding: 24px;
   }
 
+  &__tabletPcMenu {
+    display: none;
+    @include iPad {
+      display: block;
+    }
+  }
+
   &__list {
     line-height: 64px;
     margin: 0;
     padding: 0;
 
     @include iPad {
+      @include flex($justify: center, $align: center);
       justify-content: flex-end;
+      line-height: 24px;
     }
   }
 
@@ -142,8 +159,8 @@ $PC: 1080px; //PC（1080px以上）
     padding: 0 14px;
 
     @include iPad {
-      border: none;
       width: auto;
+      padding: 0;
     }
   }
 
@@ -153,7 +170,7 @@ $PC: 1080px; //PC（1080px以上）
 
     @include iPad {
       width: auto;
-      padding: 8px 32px;
+      padding: 8px 40px;
     }
   }
 
@@ -164,22 +181,22 @@ $PC: 1080px; //PC（1080px以上）
     @include iPad {
       align-items: end;
       position: absolute;
-      top: 24%;
+      top: 16%;
       right: 4%;
     }
 
     @include PC {
-      top: 32%;
+      top: 24%;
       right: 0;
     }
   }
 
   &__snsBtn {
     display: block;
-    width: 48px;
+    width: 64px;
     text-align: center;
     font-size: 24px;
-    padding: 8px 0;
+    padding: 16px;
 
     @include iPad {
       width: 64px;
