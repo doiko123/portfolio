@@ -7,6 +7,7 @@
   <meta name="description"
     content="大阪でweb制作を行っていますdoikoのポートフォリオサイトです。お客様の求めるイメージやご要望を洗い出し、満足度の高いサイト設計を心掛けています。必要に応じてJavaScriptを使用し、動きを付けたサイトづくりも致します。">
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/styles.css">
   <!-- OGP設定 URL決まったら以下2つのURL欄とimageのとこに入れる -->
@@ -31,31 +32,42 @@
           <img class="header__logoImg" src="images/top_logo.svg" alt="doiko（chiaki yamaguchi）ロゴ">
         </a>
       </h1>
-      <nav class="header__nav">
-        <ul class="header__list">
-          <li class="header__item">
-            <a href="about.html" class="header__link">About</a>
-          </li>
-          <li class="header__item">
-            <a href="works.html" class="header__link">Works</a>
-          </li>
-          <li class="header__item--last">
-            <a href="contact.html" class="header__link">Contact</a>
-          </li>
-        </ul>
-      </nav>
-      <ul class="header__snsList">
-        <li>
-          <a href="https://twitter.com/doiko_niki" class="header__snsBtn">
-            <i class="fab fa-twitter" alt="Twitterへのリンク"></i>
-          </a>
-        </li>
-        <li>
-          <a href="https://github.com/doiko123" class="header__snsBtn">
-            <i class="fab fa-github" alt="GitHubへのリンク"></i>
-          </a>
-        </li>
-      </ul>
+      <div class="header__spMenu">
+        <span id="open" class="material-icons">menu</span>
+      </div>
+      <div class="header__overlay">
+        <div class="header__spCloseMenu">
+          <span id="close" class="material-icons">close</span>
+        </div>
+        <nav class="header__nav">
+          <ul class="header__list">
+            <li class="header__item">
+              <a href="about.html" class="header__link">About</a>
+            </li>
+            <li class="header__item">
+              <a href="works.html" class="header__link">Works</a>
+            </li>
+            <li class="header__item">
+              <a href="contact.html" class="header__link">Contact</a>
+            </li>
+          </ul>
+        </nav>
+        <nav>
+          <ul class="header__snsList">
+            <li>
+              <a href="https://twitter.com/doiko_niki" class="header__snsBtn">
+                <i class="fab fa-twitter" alt="Twitterへのリンク"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/doiko123" class="header__snsBtn">
+                <i class="fab fa-github" alt="GitHubへのリンク"></i>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div id="blackBg" class="header__blackBg"></div>
     </header>
     <main>
       <section class="firstView">

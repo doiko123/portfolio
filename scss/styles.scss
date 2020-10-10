@@ -59,6 +59,8 @@ $PC: 1080px; //PC（1080px以上）
 }
 
 .header {
+  @include flex($justify: space-between, $align: center);
+
   @include iPad {
     padding: 40px 24px 16px;
     position: relative;
@@ -72,8 +74,8 @@ $PC: 1080px; //PC（1080px以上）
 
   &__logoImg {
     display: block;
-    width: 184px;
-    padding: 16px 16px 8px 16px;
+    width: 160px;
+    padding: 16px;
     text-align: left;
 
     @include iPad {
@@ -86,33 +88,58 @@ $PC: 1080px; //PC（1080px以上）
     }
   }
 
-  &__list {
-    @include flex($justify: center, $align: center);
-    border-top: 2px solid $main-color1;
-    border-bottom: 2px solid $main-color1;
+  &__spMenu {
+    cursor: pointer;
+    font-size: $sub-font-size1;
+    padding: 24px;
+    z-index: 200;
+
+    &--hide {
+      display: none;
+    }
+  }
+
+  &__overlay {
+    background: #fafafa;
+    cursor: pointer;
+    font-size: $sub-font-size1;
     font-family: $main-font-family1;
-    width: 100%;
+    position: fixed;
+    top: 0;
+    right: -320px;
+    width: 240px;
+    height: 100vh;
+    padding: 40px 0 0;
+    text-align: center;
+    transition: all .6s;
+    z-index: 300;
+    overflow-y: auto;
+
+    &--open {
+      right: 0;
+    }
+  }
+
+  &__spCloseMenu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 24px;
+  }
+
+  &__list {
+    line-height: 64px;
+    margin: 0;
+    padding: 0;
 
     @include iPad {
-      border: none;
       justify-content: flex-end;
     }
   }
 
   &__item {
-    border-right: 2px solid $main-color1;
-    width: 32%;
     text-align: center;
-
-    @include iPad {
-      border: none;
-      width: auto;
-    }
-  }
-
-  &__item--last {
-    width: 32%;
-    text-align: center;
+    padding: 0 14px;
 
     @include iPad {
       border: none;
@@ -122,8 +149,7 @@ $PC: 1080px; //PC（1080px以上）
 
   &__link {
     display: block;
-    width: 100%;
-    padding: 16px 0;
+    padding: 8px 0;
 
     @include iPad {
       width: auto;
@@ -158,6 +184,25 @@ $PC: 1080px; //PC（1080px以上）
     @include iPad {
       width: 64px;
       padding: 16px;
+    }
+  }
+
+  &__blackBg {
+    background-color: #333;
+    cursor: pointer;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .6s;
+    z-index: 100;
+
+    &--mask {
+      opacity: .7;
+      visibility: visible;
     }
   }
 }
