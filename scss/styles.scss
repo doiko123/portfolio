@@ -315,8 +315,8 @@ $PC: 1080px; //PC（1080px以上）
   width: 36px;
   height: 36px;
   line-height: 1.1;
-  opacity: .7;
-  z-index: 10;
+  opacity: 0;
+  z-index: 100;
   @include iPad {
     width: 48px;
     height: 48px;
@@ -338,7 +338,7 @@ $PC: 1080px; //PC（1080px以上）
       -ms-transform: rotate(-45deg);
       -webkit-transform: rotate(-45deg);
       transform: rotate(-45deg);
-      z-index: 100;
+      z-index: 1000;
       @include iPad {
         width: 14px;
         height: 14px;
@@ -352,15 +352,12 @@ $PC: 1080px; //PC（1080px以上）
 }
 
 .fadeIn {
-  opacity: 0;
-  visibility: hidden;
+  opacity: 1;
   transform: translateY(40px);
   transition: all 1s;
 
-  &__isShow {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0px);
+  &:hover {
+    opacity: .7;
   }
 }
 

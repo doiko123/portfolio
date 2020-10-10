@@ -370,8 +370,8 @@
   width: 36px;
   height: 36px;
   line-height: 1.1;
-  opacity: .7;
-  z-index: 10;
+  opacity: 0;
+  z-index: 100;
 }
 
 @media screen and (min-width: 768px) {
@@ -399,7 +399,7 @@
   border-right: solid 3px #fafafa;
   -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
-  z-index: 100;
+  z-index: 1000;
 }
 
 @media screen and (min-width: 768px) {
@@ -417,19 +417,15 @@
 }
 
 .fadeIn {
-  opacity: 0;
-  visibility: hidden;
+  opacity: 1;
   -webkit-transform: translateY(40px);
           transform: translateY(40px);
   -webkit-transition: all 1s;
   transition: all 1s;
 }
 
-.fadeIn__isShow {
-  opacity: 1;
-  visibility: visible;
-  -webkit-transform: translateY(0px);
-          transform: translateY(0px);
+.fadeIn:hover {
+  opacity: .7;
 }
 
 .footer__contactArea {
