@@ -62,15 +62,13 @@ $PC: 1080px; //PC（1080px以上）
   @include flex($justify: space-between, $align: center);
 
   @include iPad {
-    display: block;
-    padding: 24px 24px 8px;
-    position: relative;
+    padding: 16px;
   }
 
   @include PC {
     max-width: 1080px;
     margin: 0 auto;
-    padding: 24px 0 8px;
+    padding: 24px 0 24px;
   }
 
   &__logoImg {
@@ -81,7 +79,7 @@ $PC: 1080px; //PC（1080px以上）
 
     @include iPad {
       width: 240px;
-      padding: 0 24px;
+      padding: 16px 24px;
     }
 
     @include PC {
@@ -98,6 +96,7 @@ $PC: 1080px; //PC（1080px以上）
     &--hide {
       display: none;
     }
+
     @include iPad {
       display: none;
     }
@@ -137,8 +136,10 @@ $PC: 1080px; //PC（1080px以上）
 
   &__tabletPcMenu {
     display: none;
+
     @include iPad {
-      display: block;
+      @include flex($justify: center, $align: flex-end);
+      flex-direction: column;
     }
   }
 
@@ -179,15 +180,7 @@ $PC: 1080px; //PC（1080px以上）
     margin: 8px 0 0;
 
     @include iPad {
-      align-items: end;
-      position: absolute;
-      top: 16%;
-      right: 4%;
-    }
-
-    @include PC {
-      top: 24%;
-      right: 0;
+      margin: 0 16px 0 0;
     }
   }
 
@@ -767,7 +760,7 @@ $PC: 1080px; //PC（1080px以上）
 
     @include iPad {
       margin: 0 16px 48px;
-      padding: 16px 32px;
+      padding: 8px 32px;
     }
 
     @include PC {

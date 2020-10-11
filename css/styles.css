@@ -25,9 +25,7 @@
 
 @media screen and (min-width: 768px) {
   .header {
-    display: block;
-    padding: 24px 24px 8px;
-    position: relative;
+    padding: 16px;
   }
 }
 
@@ -35,7 +33,7 @@
   .header {
     max-width: 1080px;
     margin: 0 auto;
-    padding: 24px 0 8px;
+    padding: 24px 0 24px;
   }
 }
 
@@ -49,7 +47,7 @@
 @media screen and (min-width: 768px) {
   .header__logoImg {
     width: 240px;
-    padding: 0 24px;
+    padding: 16px 24px;
   }
 }
 
@@ -117,7 +115,19 @@
 
 @media screen and (min-width: 768px) {
   .header__tabletPcMenu {
-    display: block;
+    display: -webkit-box;
+    display: flex;
+    display: -ms-flexbox;
+    justify-content: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    align-items: flex-end;
+    -webkit-box-align: flex-end;
+    -ms-flex-align: flex-end;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 
@@ -184,19 +194,7 @@
 
 @media screen and (min-width: 768px) {
   .header__snsList {
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: end;
-    position: absolute;
-    top: 16%;
-    right: 4%;
-  }
-}
-
-@media screen and (min-width: 1080px) {
-  .header__snsList {
-    top: 24%;
-    right: 0;
+    margin: 0 16px 0 0;
   }
 }
 
