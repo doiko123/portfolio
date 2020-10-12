@@ -694,7 +694,7 @@ $PC: 1080px; //PC（1080px以上）
 
   &__listForTopPage {
     @include iPad {
-      @include flex($justify:center, $align:center)
+      @include flex($justify:space-around, $align:center)
     }
   }
 
@@ -708,8 +708,15 @@ $PC: 1080px; //PC（1080px以上）
     margin: 0 auto;
 
     @include iPad {
-      width: 64%;
-      margin: 0 auto;
+      width: 240px;
+      height: 180px;
+      margin: 0 auto 16px;
+      object-fit: cover;
+    }
+
+    @include PC {
+      width: 400px;
+      height: 300px;
     }
   }
 
