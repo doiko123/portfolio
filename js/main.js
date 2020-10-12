@@ -1,48 +1,44 @@
 'use strict';
 
 /* ハンバーガーメニュー */
-const menuOpen = document.getElementById('open');
-const menuClose = document.getElementById('close');
 const overlayMenu = document.querySelector('.header__overlay');
-const backgroundMask = document.getElementById('blackBg')
 
-menuOpen.addEventListener('click', function (e) {
+document.getElementById('open').addEventListener('click', () => {
   openOverlayMenu();
 });
 
-menuClose.addEventListener('click', function (e) {
+document.getElementById('close').addEventListener('click', () => {
   closeOverlayMenu();
 });
 
-backgroundMask.addEventListener('click', function (e) {
+document.getElementById('blackBg').addEventListener('click', () => {
   closeOverlayMenu();
 });
-
 
 // 上で呼び出す各関数
-function openOverlayMenu() {
+const openOverlayMenu = () => {
   overlayMenu.classList.add('header__overlay--open');
   backgroundMask.classList.add('header__blackBg--mask');
 }
 
-function closeOverlayMenu() {
+const closeOverlayMenu = () => {
   overlayMenu.classList.remove('header__overlay--open');
   backgroundMask.classList.remove('header__blackBg--mask');
 }
 
 
 /* スクロールでトップに戻るボタンを表示 */
-const pxChange = 1;
 const buttonToPageTop = document.getElementById('goToPageTopLink')
 
-window.addEventListener('scroll', function (e) {
+window.addEventListener('scroll', () => {
   let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
   showButtonOnScroll(scrollTop);
 });
 
 // 上で呼び出す関数
 function showButtonOnScroll(scrollTop) {
-  if (scrollTop > pxChange) {
+  const pxChange = 1;
+    if (scrollTop > pxChange) {
     buttonToPageTop.classList.add('fadeIn');
   } else {
     buttonToPageTop.classList.remove('fadeIn');
@@ -51,7 +47,7 @@ function showButtonOnScroll(scrollTop) {
 
 // anime.js利用
 /* トップに戻るボタンのスムーズスクロール */
-buttonToPageTop.addEventListener('click', function (e) {
+buttonToPageTop.addEventListener('click', () => {
   anime.remove('html, body');
   anime({
     targets: 'html, body',
