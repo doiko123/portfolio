@@ -106,8 +106,10 @@
           <h2 class="section__pageTitleText">About</h2>
         </div>
         <section class="profile">
-          <img src="https://doiko123.github.io/portfolio/images/about.JPG" class="profile__img"
-            alt="プロフィール画像">
+          <picture class="profile__img">
+            <source srcset="https://doiko123.github.io/portfolio/images/about.webp" type="image/webp">
+            <img src="https://doiko123.github.io/portfolio/images/about.JPG" alt="プロフィール画像">
+          </picture>
           <div class="profile__topText">
             <h3 class="profile__name">どいこ　／　Chiaki Yamaguchi</h3>
             <p class="profile__innerText">大阪市在住</p>
@@ -159,5 +161,6 @@
     </footer>
   </section>
   <script type="text/javascript" src="js/main.js"></script>
+  <script src="js/picturefill.min.js"></script>
 </body>
 </html>

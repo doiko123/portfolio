@@ -104,10 +104,17 @@
       <section class="firstView">
         <div class="firstView__wrapper">
           <div class="firstView__image--pc">
-            <img src="https://doiko123.github.io/portfolio/images/top.jpg" alt="プロフィール写真">
+            <picture>
+              <source srcset="https://doiko123.github.io/portfolio/images/top.webp"
+                type="image/webp">
+              <img src="https://doiko123.github.io/portfolio/images/top.jpg" alt="プロフィール写真">
+            </picture>
           </div>
           <div class="firstView__image--sp">
-            <img src="https://doiko123.github.io/portfolio/images/top_sp.jpg" alt="プロフィール写真">
+            <picture>
+              <source srcset="https://doiko123.github.io/portfolio/images/top_sp.webp" type="image/webp">
+              <img src="https://doiko123.github.io/portfolio/top_sp.jpg" alt="プロフィール写真">
+            </picture>
           </div>
           <div class="firstView__textBox">
             <p class="firstView__text">音を紡ぐように、<br>
@@ -144,14 +151,18 @@
           <ul class="works__listForTopPage">
             <li class="works__itemForTopPage">
               <a href="https://doiko123.github.io/portfolio/works.html">
-                <img src="https://doiko123.github.io/portfolio/images/works_02.png" class="works__imgForTopPage"
-                  alt="過去作品画像1">
+                <picture class="works__imgForTopPage">
+                  <source srcset="https://doiko123.github.io/portfolio/images/works_02.webp" type="image/webp">
+                  <img src="https://doiko123.github.io/portfolio/images/works_02.png" alt="過去作品画像1">
+                </picture>
               </a>
             </li>
             <li class="works__itemForTopPage">
               <a href="https://doiko123.github.io/portfolio/works.html">
-                <img src="https://doiko123.github.io/portfolio/images/works_01.png" class="works__imgForTopPage"
-                  alt="過去作品画像2">
+                <picture class="works__imgForTopPage">
+                  <source srcset="https://doiko123.github.io/portfolio/images/works_01.webp" type="image/webp">
+                  <img src="https://doiko123.github.io/portfolio/images/works_01.png" alt="過去作品画像2">
+                </picture>
               </a>
             </li>
           </ul>
@@ -173,8 +184,9 @@
         <small class="footer__copyright">© Doiko all rights reserved.</small>
       </div>
     </footer>
-    </div>
+  </div>
   <script src="anime.min.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/picturefill.min.js"></script>
 </body>
 </html>

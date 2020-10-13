@@ -108,8 +108,10 @@
         <div class="works__container">
           <div class="works__item">
             <!--完成後はリンク追加-->
-            <img src="https://doiko123.github.io/portfolio/images/works_02.png" class="works__img"
-              alt="ポートフォリオ画像1">
+            <picture class="works__img">
+              <source srcset="https://doiko123.github.io/portfolio/images/works_02.webp" type="image/webp">
+              <img src="https://doiko123.github.io/portfolio/images/works_02.png" alt="過去作品画像1">
+            </picture>
             <div class="works__text">
               <h3 class="works__title">
                 ■ 株式会社ハートフルメンテ（架空の企業様サイト）<br>※ 現在制作中</h3>
@@ -124,8 +126,10 @@
             </div>
           </div>
           <div class="works__item">
-            <img src="https://doiko123.github.io/portfolio/images/noimage.png" class="works__img"
-              alt="ポートフォリオ画像2">
+            <picture class="works__img">
+              <source srcset="https://doiko123.github.io/portfolio/images/noimage.webp" type="image/webp">
+              <img src="https://doiko123.github.io/portfolio/images/noimage.png" alt="過去作品画像2">
+            </picture>
             <div class="works__text">
               <h3 class="works__title">
                 ■ 某企業様（リンク公開不可／刺繍加工業 企業様サイト）</h3>
@@ -139,8 +143,10 @@
             </div>
           </div>
           <div class="works__item">
-            <img src="https://doiko123.github.io/portfolio/images/works_01.png" class="works__img"
-              alt="ポートフォリオ画像3">
+            <picture class="works__img">
+              <source srcset="https://doiko123.github.io/portfolio/images/works_01.webp" type="image/webp">
+              <img src="https://doiko123.github.io/portfolio/images/works_01.png" alt="過去作品画像3">
+            </picture>
             <div class="works__text">
               <h3 class="works__title">
                 ■ 某企業様（リンク公開不可／簡易ブラウザアプリ）</h3>
@@ -170,5 +176,6 @@
     </footer>
   </div>
   <script type="text/javascript" src="js/main.js"></script>
+  <script src="js/picturefill.min.js"></script>
 </body>
 </html>
