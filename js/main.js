@@ -45,20 +45,6 @@ function showButtonOnScroll(scrollTop) {
   }
 }
 
-// anime.js利用
-/* トップに戻るボタンのスムーズスクロール */
-buttonToPageTop.addEventListener('click', () => {
-  anime.remove('html, body');
-  anime({
-    targets: 'html, body',
-    scrollTop: 0,
-    dulation: 600,
-    easing: 'easeOutCubic',
-  });
-  return false;
-});
-
-
 /* contact.htmlフォームのメールアドレス バリデーションチェック */
 function inputValueCheck() {
   const inputEmail = document.getElementById('form-mail').value;
