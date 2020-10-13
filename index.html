@@ -6,22 +6,24 @@
   <title>Doiko Engineer Portfolio</title>
   <meta name="description"
     content="大阪でweb制作を行っていますdoikoのポートフォリオサイトです。お客様の求めるイメージやご要望を洗い出し、満足度の高いサイト設計を心掛けています。必要に応じてJavaScriptを使用し、動きを付けたサイトづくりも致します。">
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/styles.css">
+  <!-- OGP -->
   <meta property="og:url" content="https://doiko123.github.io/portfolio/index.html">
   <meta property="og:type" content="website">
   <meta property="og:title" content="エンジニアdoikoのポートフォリオサイト">
   <meta property="og:site_name" content="Doiko Engineer Portfolio">
   <meta property="og:description"
-    content="大阪でweb制作を行っていますdoikoのポートフォリオサイトです。お客様の求めるイメージやご要望を洗い出し、満足度の高いサイト設計を心掛けています。必要に応じてJavaScriptを使用し、動きを付けたサイトづくりも致します。">
+  content="大阪でweb制作を行っていますdoikoのポートフォリオサイトです。お客様の求めるイメージやご要望を洗い出し、満足度の高いサイト設計を心掛けています。必要に応じてJavaScriptを使用し、動きを付けたサイトづくりも致します。">
   <meta property="og:image" content="https://doiko123.github.io/portfolio/images/top_sp.jpg">
+  <!-- Twitter cards -->
   <meta property="twitter:card" content="summary_large_image">
   <meta property="twitter:site" content="@doiko_niki">
   <meta property="twitter:player" content="@doiko_niki">
-  <!-- font awesome -->
-  <script src="https://kit.fontawesome.com/fcad46a4f1.js" crossorigin="anonymous"></script>
+  <!-- google fonts・icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
   <div class="container">
@@ -104,10 +106,17 @@
       <section class="firstView">
         <div class="firstView__wrapper">
           <div class="firstView__image--pc">
-            <img src="https://doiko123.github.io/portfolio/images/top.jpg" alt="プロフィール写真">
+            <picture>
+              <source srcset="https://doiko123.github.io/portfolio/images/top.webp"
+                type="image/webp">
+              <img src="https://doiko123.github.io/portfolio/images/top.jpg" alt="プロフィール写真">
+            </picture>
           </div>
           <div class="firstView__image--sp">
-            <img src="https://doiko123.github.io/portfolio/images/top_sp.jpg" alt="プロフィール写真">
+            <picture>
+              <source srcset="https://doiko123.github.io/portfolio/images/top_sp.webp" type="image/webp">
+              <img src="https://doiko123.github.io/portfolio/top_sp.jpg" alt="プロフィール写真">
+            </picture>
           </div>
           <div class="firstView__textBox">
             <p class="firstView__text">音を紡ぐように、<br>
@@ -144,14 +153,18 @@
           <ul class="works__listForTopPage">
             <li class="works__itemForTopPage">
               <a href="https://doiko123.github.io/portfolio/works.html">
-                <img src="https://doiko123.github.io/portfolio/images/works_02.png" class="works__imgForTopPage"
-                  alt="過去作品画像1">
+                <picture class="works__imgForTopPage">
+                  <source srcset="https://doiko123.github.io/portfolio/images/works_02.webp" type="image/webp">
+                  <img src="https://doiko123.github.io/portfolio/images/works_02.png" alt="過去作品画像1">
+                </picture>
               </a>
             </li>
             <li class="works__itemForTopPage">
               <a href="https://doiko123.github.io/portfolio/works.html">
-                <img src="https://doiko123.github.io/portfolio/images/works_01.png" class="works__imgForTopPage"
-                  alt="過去作品画像2">
+                <picture class="works__imgForTopPage">
+                  <source srcset="https://doiko123.github.io/portfolio/images/works_01.webp" type="image/webp">
+                  <img src="https://doiko123.github.io/portfolio/images/works_01.png" alt="過去作品画像2">
+                </picture>
               </a>
             </li>
           </ul>
@@ -173,8 +186,9 @@
         <small class="footer__copyright">© Doiko all rights reserved.</small>
       </div>
     </footer>
-    </div>
-  <script src="anime.min.js"></script>
+  </div>
   <script src="js/main.js"></script>
+  <script src="https://kit.fontawesome.com/fcad46a4f1.js" crossorigin="anonymous"></script>
+  <script src="js/picturefill.min.js"></script>
 </body>
 </html>

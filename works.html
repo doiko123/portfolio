@@ -6,22 +6,24 @@
   <title>Works | Doiko Engineer Portfolio</title>
   <meta name="description"
     content="大阪でweb制作を行っていますdoikoのポートフォリオサイトです。お客様の求めるイメージやご要望を洗い出し、満足度の高いサイト設計を心掛けています。必要に応じてJavaScriptを使用し、動きを付けたサイトづくりも致します。">
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/styles.css">
-  <meta property="og:url" content="https://doiko123.github.io/portfolio/index.html">
+  <!-- OGP -->
+  <meta property="og:url" content="https://doiko123.github.io/portfolio/works.html">
   <meta property="og:type" content="article">
   <meta property="og:title" content="エンジニアdoikoの過去作品集">
   <meta property="og:site_name" content="Works | Doiko Engineer Portfolio">
   <meta property="og:description"
     content="大阪でweb制作を行っていますdoikoのポートフォリオサイトです。お客様の求めるイメージやご要望を洗い出し、満足度の高いサイト設計を心掛けています。必要に応じてJavaScriptを使用し、動きを付けたサイトづくりも致します。">
   <meta property="og:image" content="https://doiko123.github.io/portfolio/images/top_sp.jpg">
+  <!-- Twitter cards -->
   <meta property="twitter:card" content="summary_large_image">
   <meta property="twitter:site" content="@doiko_niki">
   <meta property="twitter:player" content="@doiko_niki">
-  <!-- font awesome -->
-  <script src="https://kit.fontawesome.com/fcad46a4f1.js" crossorigin="anonymous"></script>
+  <!-- google fonts・icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
   <div class="container">
@@ -108,8 +110,10 @@
         <div class="works__container">
           <div class="works__item">
             <!--完成後はリンク追加-->
-            <img src="https://doiko123.github.io/portfolio/images/works_02.png" class="works__img"
-              alt="ポートフォリオ画像1">
+            <picture class="works__img">
+              <source srcset="https://doiko123.github.io/portfolio/images/works_02.webp" type="image/webp">
+              <img src="https://doiko123.github.io/portfolio/images/works_02.png" alt="過去作品画像1">
+            </picture>
             <div class="works__text">
               <h3 class="works__title">
                 ■ 株式会社ハートフルメンテ（架空の企業様サイト）<br>※ 現在制作中</h3>
@@ -124,8 +128,10 @@
             </div>
           </div>
           <div class="works__item">
-            <img src="https://doiko123.github.io/portfolio/images/noimage.png" class="works__img"
-              alt="ポートフォリオ画像2">
+            <picture class="works__img">
+              <source srcset="https://doiko123.github.io/portfolio/images/noimage.webp" type="image/webp">
+              <img src="https://doiko123.github.io/portfolio/images/noimage.png" alt="過去作品画像2">
+            </picture>
             <div class="works__text">
               <h3 class="works__title">
                 ■ 某企業様（リンク公開不可／刺繍加工業 企業様サイト）</h3>
@@ -139,8 +145,10 @@
             </div>
           </div>
           <div class="works__item">
-            <img src="https://doiko123.github.io/portfolio/images/works_01.png" class="works__img"
-              alt="ポートフォリオ画像3">
+            <picture class="works__img">
+              <source srcset="https://doiko123.github.io/portfolio/images/works_01.webp" type="image/webp">
+              <img src="https://doiko123.github.io/portfolio/images/works_01.png" alt="過去作品画像3">
+            </picture>
             <div class="works__text">
               <h3 class="works__title">
                 ■ 某企業様（リンク公開不可／簡易ブラウザアプリ）</h3>
@@ -170,5 +178,7 @@
     </footer>
   </div>
   <script type="text/javascript" src="js/main.js"></script>
+  <script src="https://kit.fontawesome.com/fcad46a4f1.js" crossorigin="anonymous"></script>
+  <script src="js/picturefill.min.js"></script>
 </body>
 </html>
