@@ -2,14 +2,14 @@
 /* variables */
 /* media query */
 /* flexbox */
-
 /* web fonts */
 @font-face {
-  font-family: "Lato";
+  font-family: 'Lato';
   font-style: normal;
   font-weight: 400;
-  src: url(../fonts/Lato-Regular.ttf) format("truetype");
-  src: url(../fonts/Lato-Regular.woff) format("woff");
+  font-display: swap;
+  src: url(https://doiko123.github.io/portfolio/fonts/Lato-Regular.woff) format("woff");
+  src: url(https://doiko123.github.io/portfolio/fonts/Lato-Regular.ttf) format("truetype");
 }
 
 /*common styles*/
@@ -210,7 +210,7 @@
 
 .header__snsBtn {
   display: block;
-  width: 64px;
+  width: 56px;
   text-align: center;
   font-size: 24px;
   padding: 16px;
@@ -218,7 +218,7 @@
 
 @media screen and (min-width: 768px) {
   .header__snsBtn {
-    width: 64px;
+    width: 56px;
     padding: 16px;
   }
 }
@@ -298,6 +298,7 @@
 }
 
 .firstView__image--sp {
+  display: block;
   max-width: 480px;
   margin: 0 auto;
 }

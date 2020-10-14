@@ -54,8 +54,9 @@ $PC: 1080px; //PC（1080px以上）
   font-family: 'Lato';
   font-style: normal;
   font-weight: 400;
-  src: url(../fonts/Lato-Regular.ttf) format('truetype');
-  src: url(../fonts/Lato-Regular.woff) format('woff');
+  font-display: swap;
+  src: url(https://doiko123.github.io/portfolio/fonts/Lato-Regular.woff) format('woff');
+  src: url(https://doiko123.github.io/portfolio/fonts/Lato-Regular.ttf) format('truetype');
 }
 
 /*common styles*/
@@ -195,13 +196,13 @@ $PC: 1080px; //PC（1080px以上）
 
   &__snsBtn {
     display: block;
-    width: 64px;
+    width: 56px;
     text-align: center;
     font-size: 24px;
     padding: 16px;
 
     @include iPad {
-      width: 64px;
+      width: 56px;
       padding: 16px;
     }
   }
@@ -276,6 +277,7 @@ $PC: 1080px; //PC（1080px以上）
   }
 
   &__image--sp {
+    display: block;
     max-width: 480px;
     margin: 0 auto;
 
