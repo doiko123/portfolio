@@ -196,13 +196,13 @@ $PC: 1080px; //PC（1080px以上）
 
   &__snsBtn {
     display: block;
-    width: 64px;
+    width: 56px;
     text-align: center;
     font-size: 24px;
     padding: 16px;
 
     @include iPad {
-      width: 64px;
+      width: 56px;
       padding: 16px;
     }
   }
