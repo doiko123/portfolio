@@ -49,6 +49,15 @@ $PC: 1080px; //PC（1080px以上）
   -ms-flex-align: $align; //IE対応
 }
 
+/* web fonts */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/Lato-Regular.ttf) format('truetype');
+  src: url(../fonts/Lato-Regular.woff) format('woff');
+}
+
 /*common styles*/
 .container {
   color: $main-color0;
