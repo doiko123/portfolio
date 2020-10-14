@@ -2,10 +2,9 @@
 /* variables */
 /* media query */
 /* flexbox */
-
 /* web fonts */
 @font-face {
-  font-family: "Lato";
+  font-family: 'Lato';
   font-style: normal;
   font-weight: 400;
   src: url(../fonts/Lato-Regular.ttf) format("truetype");
@@ -298,6 +297,7 @@
 }
 
 .firstView__image--sp {
+  display: block;
   max-width: 480px;
   margin: 0 auto;
 }

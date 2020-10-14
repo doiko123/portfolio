@@ -276,6 +276,7 @@ $PC: 1080px; //PC（1080px以上）
   }
 
   &__image--sp {
+    display: block;
     max-width: 480px;
     margin: 0 auto;
 
