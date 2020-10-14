@@ -10,7 +10,6 @@
   font-weight: 400;
   src: url(../fonts/Lato-Regular.ttf) format("truetype");
   src: url(../fonts/Lato-Regular.woff) format("woff");
-  font-display: swap;
 }
 
 /*common styles*/
