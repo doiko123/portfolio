@@ -2,6 +2,16 @@
 /* variables */
 /* media query */
 /* flexbox */
+
+/* web fonts */
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/Lato-Regular.ttf) format("truetype");
+  src: url(../fonts/Lato-Regular.woff) format("woff");
+}
+
 /*common styles*/
 .container {
   color: #333;
