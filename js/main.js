@@ -18,12 +18,12 @@ document.getElementById('blackBg').addEventListener('click', () => {
 // 上で呼び出す各関数
 const openOverlayMenu = () => {
   overlayMenu.classList.add('header__overlay--open');
-  backgroundMask.classList.add('header__blackBg--mask');
+  document.querySelector('.header__blackBg').classList.add('header__blackBg--mask');
 }
 
 const closeOverlayMenu = () => {
   overlayMenu.classList.remove('header__overlay--open');
-  backgroundMask.classList.remove('header__blackBg--mask');
+  document.querySelector('.header__blackBg').classList.remove('header__blackBg--mask');
 }
 
 
