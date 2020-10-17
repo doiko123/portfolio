@@ -550,7 +550,7 @@ $PC: 1080px; //PC（1080px以上）
 
     @include iPad {
       font-size: $sub-font-size1;
-      margin: 64px;
+      margin: 0 0 0 64px;
       text-align: left;
     }
   }
@@ -559,7 +559,12 @@ $PC: 1080px; //PC（1080px以上）
     padding: 0 0 8px;
   }
 
-  &__innerText {
+  &__innerText1 {
+    padding: 0 0 16px;
+  }
+
+  &__innerText2 {
+    font-size: $sub-font-size0;
     padding: 0 0 8px;
   }
 }
