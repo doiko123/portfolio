@@ -1,6 +1,7 @@
 /* variables */
 $main-color0: #333;
-$main-color1: #c4c4c4;
+$sub-color0: #949494;
+$sub-color1: #c4c4c4;
 $main-background: #d6f8fc;
 $sub-background: #98e4ec;
 
@@ -604,7 +605,7 @@ $PC: 1080px; //PC（1080px以上）
   }
 
   &__wrapper {
-    border: 2px solid $main-color1;
+    border: 2px solid $sub-color1;
     width: 80%;
     margin: 0 auto;
 
@@ -635,7 +636,8 @@ $PC: 1080px; //PC（1080px以上）
     margin: 0 16px 16px;
 
     @include iPad {
-      margin: 0 64px 40px;
+      max-width: 640px;
+      margin: 0 auto 40px;
     }
 
     @include PC {
@@ -684,14 +686,38 @@ $PC: 1080px; //PC（1080px以上）
   }
 
   &__title {
-    @include PC {
+    font-size: $main-font-size;
+
+    @include iPad {
+      border-bottom: 1px solid $main-color0;
       font-size: $sub-font-size1;
     }
   }
 
+  &__details {
+    color: $sub-color0;
+    padding: 4px 0;
+
+    @include iPad {
+      padding: 4px 0;
+    }
+
+    @include PC {
+      padding: 4px 0 0;
+    }
+  }
+
   &__skills {
-    color: $main-color1;
-    padding: 0 0 8px;
+    font-weight: bold;
+    padding: 0 0 32px;
+
+    @include iPad {
+      padding: 0 0 16px;
+    }
+  }
+
+  &__skillsIndex {
+    font-size: 24px;
   }
 
   &__innerText {
