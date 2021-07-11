@@ -5,16 +5,9 @@ $sub-color1: #c4c4c4;
 $main-background: #d6f8fc;
 $sub-background: #98e4ec;
 
-$main-font-family0: Helvetica,
-'游ゴシック',
-'Yu Gothic',
-YuGothic,
-HiraKakuProN-W3,
-'メイリオ',
-Meiryo,
-sans-serif;
-$main-font-family1: 'Lato',
-sans-serif;
+$main-font-family0: Helvetica, "游ゴシック", "Yu Gothic", YuGothic,
+  HiraKakuProN-W3, "メイリオ", Meiryo, sans-serif;
+$main-font-family1: "Lato", sans-serif;
 
 $main-font-size: 16px;
 $sub-font-size0: 14px;
@@ -52,12 +45,14 @@ $PC: 1080px; //PC（1080px以上）
 
 /* web fonts */
 @font-face {
-  font-family: 'Lato';
+  font-family: "Lato";
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url(https://doiko123.github.io/portfolio/fonts/Lato-Regular.woff) format('woff');
-  src: url(https://doiko123.github.io/portfolio/fonts/Lato-Regular.ttf) format('truetype');
+  src: url(https://doiko123.github.io/portfolio/fonts/Lato-Regular.woff)
+    format("woff");
+  src: url(https://doiko123.github.io/portfolio/fonts/Lato-Regular.ttf)
+    format("truetype");
 }
 
 /*common styles*/
@@ -125,7 +120,7 @@ $PC: 1080px; //PC（1080px以上）
     height: 100vh;
     padding: 40px 0 0;
     text-align: center;
-    transition: all .6s;
+    transition: all 0.6s;
     z-index: 300;
     overflow-y: auto;
 
@@ -218,11 +213,11 @@ $PC: 1080px; //PC（1080px以上）
     height: 100vh;
     opacity: 0;
     visibility: hidden;
-    transition: all .6s;
+    transition: all 0.6s;
     z-index: 100;
 
     &--mask {
-      opacity: .7;
+      opacity: 0.7;
       visibility: visible;
     }
   }
@@ -237,9 +232,9 @@ $PC: 1080px; //PC（1080px以上）
   &__textBox {
     background-color: $main-background;
     font-family: $main-font-family1;
-    font-size: .8rem;
+    font-size: 0.8rem;
     width: 256px;
-    opacity: .8;
+    opacity: 0.8;
     padding: 16px 0 16px 16px;
     position: absolute;
     bottom: 18%;
@@ -381,11 +376,17 @@ $PC: 1080px; //PC（1080px以上）
   }
 
   &__innerText {
+    display: block;
+    margin-bottom: 16px;
     font-size: $sub-font-size0;
     line-height: 2;
 
     @include iPad {
       font-size: $main-font-size;
+    }
+
+    @include PC {
+      margin: 0;
     }
   }
 }
@@ -424,7 +425,7 @@ $PC: 1080px; //PC（1080px以上）
 
     &::after {
       position: absolute;
-      content: '';
+      content: "";
       top: 40%;
       left: 35%;
       width: 10px;
@@ -450,40 +451,38 @@ $PC: 1080px; //PC（1080px以上）
 }
 
 .fadeIn {
-  opacity: .9;
+  opacity: 0.9;
   transform: translateY(-20px);
   transition: all 1s;
 
   &:hover {
-    opacity: .6;
+    opacity: 0.6;
   }
 }
 
 .footer {
   &__contactArea {
-    width: 240px;
-    margin: 0 auto 48px;
+    width: 84%;
+    margin: 0 auto 64px;
 
     @include iPad {
-      width: 320px;
-      margin: 0 auto 64px;
+      width: 360px;
+      margin: 0 auto 80px;
     }
 
     @include PC {
-      width: 344px;
-      margin: 0 auto 80px;
+      width: 400px;
     }
   }
 
   &__contactLinkBtn {
     background-color: $sub-background;
     display: block;
-    padding: 8px;
-    width: 100%;
+    padding: 12px 16px;
     text-align: center;
 
     &:hover {
-      opacity: .9;
+      opacity: 0.9;
     }
 
     &:focus {
@@ -498,14 +497,10 @@ $PC: 1080px; //PC（1080px以上）
   &__main {
     background-color: $main-background;
     width: 100%;
-    padding: 32px 0;
+    padding: 56px 0;
 
     @include iPad {
-      padding: 40px 0;
-    }
-
-    @include PC {
-      padding: 56px 0;
+      padding: 64px 0;
     }
   }
 
@@ -567,6 +562,11 @@ $PC: 1080px; //PC（1080px以上）
     font-size: $sub-font-size0;
     padding: 0 0 8px;
   }
+
+  &__detail {
+    display: block;
+    margin: 4px 0 0 16px;
+  }
 }
 
 .history {
@@ -574,6 +574,7 @@ $PC: 1080px; //PC（1080px以上）
   width: 100%;
 
   @include iPad {
+    padding: 40px 0;
     background-color: #fff;
   }
 
@@ -596,6 +597,10 @@ $PC: 1080px; //PC（1080px以上）
     line-height: 2;
     padding: 0 8px 16px;
   }
+
+  &__link {
+    color: #1e06f8;
+  }
 }
 
 .strength {
@@ -610,17 +615,16 @@ $PC: 1080px; //PC（1080px以上）
   }
 
   &__wrapper {
-    border: 2px solid $sub-color1;
-    width: 80%;
+    border: 1px solid $sub-color1;
+    width: 84%;
     margin: 0 auto;
 
     @include iPad {
-      width: 72%;
+      padding: 8px 16px;
     }
 
     @include PC {
-      max-width: 1080px;
-      width: 960px;
+      width: 980px;
     }
   }
 
@@ -651,7 +655,6 @@ $PC: 1080px; //PC（1080px以上）
     }
   }
 
-
   &__item {
     padding: 0 0 40px;
 
@@ -666,11 +669,13 @@ $PC: 1080px; //PC（1080px以上）
   }
 
   &__img {
+    margin: 0 auto 16px;
+
     @include iPad {
       display: block;
       width: 480px;
       height: 360px;
-      margin: 0 auto 16px;
+      margin: 0 auto 24px;
       object-fit: cover;
     }
 
@@ -727,6 +732,7 @@ $PC: 1080px; //PC（1080px以上）
 
   &__innerText {
     font-size: $sub-font-size0;
+    margin-bottom: 8px;
   }
 
   // 以下、index.html内のworks部分
@@ -736,7 +742,7 @@ $PC: 1080px; //PC（1080px以上）
 
   &__listForTopPage {
     @include iPad {
-      @include flex($justify:space-around, $align:center)
+      @include flex($justify: space-around, $align: center);
     }
   }
 
@@ -804,17 +810,18 @@ $PC: 1080px; //PC（1080px以上）
 
   &__titleWrapper {
     background-color: $sub-background;
-    margin: 0 0 32px;
-    padding: 8px 16px;
+    margin: 0 0 48px;
+    padding: 20px;
 
     @include iPad {
-      margin: 0 16px 48px;
-      padding: 8px 32px;
+      margin: 16px auto 56px;
+      padding: 16px;
+      text-align: center;
     }
 
     @include PC {
-      margin: 0 16px 64px;
-      padding: 16px 32px;
+      width: 90%;
+      margin: 16px auto 64px;
     }
   }
 
@@ -887,14 +894,14 @@ $PC: 1080px; //PC（1080px以上）
     background-color: $sub-background;
     border: none;
     display: block;
-    margin: 0 auto 48px;
-    padding: 8px;
-    width: 240px;
+    margin: 8px auto 80px;
+    padding: 12px 16px;
+    width: 100%;
     text-align: center;
 
     &:hover {
       cursor: pointer;
-      opacity: .9;
+      opacity: 0.9;
     }
 
     &:focus {
@@ -904,14 +911,8 @@ $PC: 1080px; //PC（1080px以上）
     }
 
     @include iPad {
-      margin: 0 auto 64px;
+      margin: 0 auto 104px;
       padding: 16px;
-      width: 320px;
-    }
-
-    @include PC {
-      margin: 0 auto 80px;
-      width: 344px;
     }
   }
 
