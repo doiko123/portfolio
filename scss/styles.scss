@@ -381,11 +381,17 @@ $PC: 1080px; //PC（1080px以上）
   }
 
   &__innerText {
+    display: block;
+    margin-bottom: 16px;
     font-size: $sub-font-size0;
     line-height: 2;
 
     @include iPad {
       font-size: $main-font-size;
+    }
+
+    @include PC {
+      margin: 0;
     }
   }
 }
