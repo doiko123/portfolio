@@ -786,12 +786,16 @@
   }
 }
 
+.works__img {
+  margin: 0 auto 16px;
+}
+
 @media screen and (min-width: 768px) {
   .works__img {
     display: block;
     width: 480px;
     height: 360px;
-    margin: 0 auto 16px;
+    margin: 0 auto 24px;
     -o-object-fit: cover;
       object-fit: cover;
   }
@@ -861,6 +865,7 @@
 
 .works__innerText {
   font-size: 14px;
+  margin-bottom: 8px;
 }
 
 .works__containerForTopPage {
