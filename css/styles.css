@@ -659,6 +659,11 @@
   padding: 0 0 8px;
 }
 
+.profile__detail {
+  display: block;
+  margin: 4px 0 0 16px;
+}
+
 .history {
   background-color: #d6f8fc;
   width: 100%;

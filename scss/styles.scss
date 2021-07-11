@@ -573,6 +573,11 @@ $PC: 1080px; //PC（1080px以上）
     font-size: $sub-font-size0;
     padding: 0 0 8px;
   }
+
+  &__detail {
+    display: block;
+    margin: 4px 0 0 16px;
+  }
 }
 
 .history {
