@@ -4,4 +4,4 @@ https://doiko123.github.io/portfolio/
 
 - 使用技術スタック：HTML／CSS（scss）／JavaScript
 <br><br>
-順次実績など追加していく予定です。
+随時実績など追加・更新しています。
